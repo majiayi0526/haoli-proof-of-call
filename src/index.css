@@ -1,0 +1,111 @@
+@import './styles/tokens.css';
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body,
+#root {
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: var(--font-sans);
+  font-size: var(--t-body);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin: 0;
+  font-weight: 600;
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  cursor: pointer;
+}
+
+a {
+  color: inherit;
+}
+
+ul,
+ol {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+canvas {
+  display: block;
+}
+
+:focus-visible {
+  outline: 2px solid var(--observed);
+  outline-offset: 2px;
+  border-radius: var(--r-tight);
+}
+
+::selection {
+  background: var(--observed);
+  color: var(--bg-deep);
+}
+
+/* 数字一律等宽等高，时间码跳动时不会抖 */
+.num {
+  font-family: var(--font-mono);
+  font-variant-numeric: tabular-nums;
+  font-feature-settings: 'tnum' 1;
+}
+
+/* 滚动条 */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: var(--surface-3) transparent;
+}
+
+*::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+*::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+*::-webkit-scrollbar-thumb {
+  background: var(--surface-3);
+  border: 3px solid var(--bg);
+  border-radius: var(--r-pill);
+}
+
+*::-webkit-scrollbar-thumb:hover {
+  background: var(--line);
+}
+
+/* 宽内容永远在自己的容器里横向滚动，body 不横向滚 */
+.scroll-x {
+  overflow-x: auto;
+  overscroll-behavior-x: contain;
+}

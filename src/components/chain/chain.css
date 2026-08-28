@@ -1,0 +1,407 @@
+.chain {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+/* ── 节点 ── */
+.cnode {
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease);
+}
+
+.cnode.is-selected {
+  border-color: var(--text-4);
+}
+
+/* 层级用左侧色条区分，而不是靠缩进——链条深了缩进就没地方了 */
+.cnode--conclusion {
+  border-left: 3px solid var(--text);
+}
+.cnode--judgment {
+  border-left: 3px solid var(--derived);
+}
+.cnode--datum {
+  border-left: 3px solid var(--observed);
+}
+.cnode--finding {
+  border-left: 3px solid var(--observed);
+}
+.cnode--question {
+  border-left: 3px solid var(--ruled);
+}
+
+.cnode[data-actor='left'] {
+  border-left-color: var(--left);
+}
+.cnode[data-actor='right'] {
+  border-left-color: var(--right);
+}
+
+.cnode.is-decided {
+  background: color-mix(in oklch, var(--confirmed) 6%, var(--surface));
+}
+
+.cnode__head {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-2);
+  width: 100%;
+  padding: var(--s-3);
+  text-align: left;
+  border-radius: var(--r-card);
+  transition: background var(--dur-fast) var(--ease);
+}
+
+.cnode__head:hover {
+  background: var(--surface-2);
+}
+
+.cnode__caret {
+  flex-shrink: 0;
+  margin-top: 1px;
+  color: var(--text-4);
+  font-size: 0.7rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.cnode__caret.is-open {
+  transform: rotate(90deg);
+}
+
+.cnode__main {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.cnode__claim {
+  color: var(--text);
+  font-size: var(--t-body);
+  line-height: 1.45;
+}
+
+.cnode--conclusion .cnode__claim {
+  font-size: var(--t-lead);
+  font-weight: 600;
+}
+
+.cnode__struck {
+  color: var(--text-4);
+  text-decoration-color: var(--warn);
+}
+
+.cnode__revised {
+  display: block;
+  margin-top: 3px;
+  color: var(--warn);
+}
+
+.cnode__meta {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex-wrap: wrap;
+}
+
+.cnode__frame {
+  padding: 0 5px;
+  border-radius: var(--r-sharp);
+  background: var(--surface-3);
+  color: var(--text-3);
+  font-size: var(--t-micro);
+}
+
+/* ── 展开体 ── */
+.cnode__body {
+  padding: 0 var(--s-3) var(--s-3) calc(var(--s-3) + 16px);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+}
+
+.cnode__detail {
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.65;
+}
+
+.cnode__row {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+}
+
+.cnode__rowlabel {
+  flex-shrink: 0;
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: 0.05em;
+}
+
+.cnode__formula {
+  flex: 1;
+  min-width: 0;
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-tight);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+  color: var(--derived);
+  font-size: var(--t-micro);
+  line-height: 1.5;
+  overflow-x: auto;
+  white-space: pre;
+}
+
+.cnode__value {
+  color: var(--text);
+  font-size: var(--t-lead);
+  font-weight: 600;
+}
+
+/* ── 规则原文 ── */
+.cnode__sources ul,
+.cnode__assumptions ul {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  margin-top: var(--s-2);
+}
+
+.rule {
+  padding: var(--s-3);
+  border-radius: var(--r-tight);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+}
+
+.rule__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  margin-bottom: var(--s-2);
+}
+
+.rule__code {
+  padding: 1px 6px;
+  border-radius: var(--r-sharp);
+  background: var(--ruled);
+  color: var(--bg-deep);
+  font-size: var(--t-micro);
+  font-weight: 700;
+}
+
+.rule__title {
+  flex: 1;
+  min-width: 0;
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+}
+
+.rule__link {
+  flex-shrink: 0;
+  color: var(--observed);
+  font-size: var(--t-micro);
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: border-color var(--dur-fast) var(--ease);
+}
+
+.rule__link:hover {
+  border-bottom-color: currentColor;
+}
+
+/* 规则原文逐字引用，视觉上必须和我们自己的话区分开 */
+.rule__quote {
+  margin: 0 0 var(--s-2);
+  padding-left: var(--s-3);
+  border-left: 2px solid var(--ruled);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  font-style: italic;
+  line-height: 1.6;
+}
+
+.rule__zh {
+  color: var(--text);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+.rule__op {
+  margin-top: var(--s-2);
+  padding-top: var(--s-2);
+  border-top: 1px dashed var(--line-soft);
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}
+
+.rule__op span {
+  color: var(--derived);
+  font-weight: 600;
+}
+
+.rule__edition {
+  margin-top: var(--s-2);
+  color: var(--text-4);
+  font-size: 0.625rem;
+}
+
+/* ── 假设 ── */
+.cnode__assumptions li {
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-tight);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+}
+
+.asm__label {
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+}
+
+.asm__value {
+  margin-left: var(--s-2);
+  padding: 0 6px;
+  border-radius: var(--r-sharp);
+  background: var(--surface-3);
+  color: var(--warn);
+  font-size: var(--t-micro);
+  font-weight: 600;
+}
+
+.asm__why {
+  margin-top: 4px;
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}
+
+/* ── 操作 ── */
+.cnode__acts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-2);
+}
+
+.cnode__act {
+  padding: 4px 10px;
+  border-radius: var(--r-tight);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  font-weight: 550;
+  transition:
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.cnode__act:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.cnode__act:active {
+  transform: translateY(1px);
+}
+
+.cnode__act--ok:hover {
+  border-color: var(--ok);
+  color: var(--ok);
+}
+
+.cnode__act--warn:hover {
+  border-color: var(--warn);
+  color: var(--warn);
+}
+
+/* ── 推翻表单 ── */
+.override {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding: var(--s-3);
+  border-radius: var(--r-tight);
+  border: 1px solid var(--warn-dim);
+  background: color-mix(in oklch, var(--warn) 5%, var(--bg-deep));
+}
+
+.override label {
+  color: var(--warn);
+  font-size: var(--t-micro);
+  font-weight: 600;
+}
+
+.override textarea {
+  padding: var(--s-2);
+  border-radius: var(--r-tight);
+  border: 1px solid var(--line);
+  background: var(--bg-deep);
+  color: var(--text);
+  font-family: inherit;
+  font-size: var(--t-small);
+  line-height: 1.5;
+  resize: vertical;
+}
+
+.override textarea:focus {
+  outline: none;
+  border-color: var(--warn);
+}
+
+.override__acts {
+  display: flex;
+  gap: var(--s-2);
+}
+
+.cnode__decision {
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-tight);
+  background: color-mix(in oklch, var(--confirmed) 10%, var(--bg-deep));
+  border-left: 2px solid var(--confirmed);
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+.cnode__decision strong {
+  color: var(--confirmed);
+}
+
+/* ── 上游 ── */
+.cnode__up {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+  padding-top: var(--s-2);
+  border-top: 1px dashed var(--line-soft);
+}
+
+.cnode__uplabel {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: 0.04em;
+}
+
+.cnode__leaf {
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-tight);
+  background: var(--bg-deep);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}

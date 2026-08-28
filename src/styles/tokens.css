@@ -1,0 +1,108 @@
+/**
+ * 设计令牌
+ *
+ * 视觉方向：裁判回放监视器。深色、高对比、以数据为主体。
+ * 语义色不是随便挑的主题色，而是 FIE 记分器的既有语言：
+ *   左方 = 红灯，右方 = 绿灯，无效/同时 = 白灯。
+ * 击剑圈的人看一眼就知道哪边是哪边，不需要图例。
+ */
+
+:root {
+  /* ── 表面层级 ── */
+  --bg: oklch(15.5% 0.009 255);
+  --bg-deep: oklch(11% 0.008 255);
+  --surface: oklch(20% 0.011 255);
+  --surface-2: oklch(24% 0.013 255);
+  --surface-3: oklch(28.5% 0.015 255);
+  --line: oklch(33% 0.016 255);
+  --line-soft: oklch(26% 0.013 255);
+
+  /* ── 文字 ── */
+  --text: oklch(95% 0.004 255);
+  --text-2: oklch(78% 0.008 255);
+  --text-3: oklch(60% 0.011 255);
+  --text-4: oklch(47% 0.012 255);
+
+  /* ── 记分灯语义色 ── */
+  --left: oklch(63% 0.215 25);
+  --left-dim: oklch(38% 0.12 25);
+  --left-glow: oklch(63% 0.215 25 / 0.28);
+  --right: oklch(72% 0.185 155);
+  --right-dim: oklch(42% 0.1 155);
+  --right-glow: oklch(72% 0.185 155 / 0.26);
+  --neutral: oklch(92% 0.006 255);
+  --neutral-dim: oklch(50% 0.008 255);
+
+  /* ── 认识论标识色：一个数字到底是什么 ── */
+  --observed: oklch(74% 0.13 215); /* 观测 */
+  --derived: oklch(76% 0.12 190); /* 推算 */
+  --estimated: oklch(70% 0.16 305); /* 估算——刻意用最扎眼的紫 */
+  --ruled: oklch(78% 0.1 95); /* 规则 */
+  --asserted: oklch(70% 0.02 255); /* 人工断言 */
+
+  /* ── 状态 ── */
+  --warn: oklch(78% 0.155 78);
+  --warn-dim: oklch(45% 0.1 78);
+  --danger: oklch(66% 0.2 20);
+  --ok: oklch(74% 0.16 150);
+  --confirmed: oklch(72% 0.15 145);
+
+  /* ── 字体 ── */
+  --font-sans:
+    -apple-system, BlinkMacSystemFont, 'PingFang SC', 'Hiragino Sans GB',
+    'Microsoft YaHei', 'Segoe UI', system-ui, sans-serif;
+  --font-mono:
+    ui-monospace, 'SF Mono', 'JetBrains Mono', Menlo, 'Cascadia Code', monospace;
+
+  /* ── 字号：正文克制，数字放大 ── */
+  --t-micro: 0.6875rem;
+  --t-small: 0.78125rem;
+  --t-body: 0.875rem;
+  --t-lead: 1rem;
+  --t-h3: 1.125rem;
+  --t-h2: clamp(1.35rem, 1.1rem + 0.9vw, 1.85rem);
+  --t-h1: clamp(1.9rem, 1.3rem + 2.4vw, 3.2rem);
+  --t-display: clamp(2.6rem, 1.4rem + 4.6vw, 5rem);
+
+  /* ── 间距 ── */
+  --s-1: 0.25rem;
+  --s-2: 0.5rem;
+  --s-3: 0.75rem;
+  --s-4: 1rem;
+  --s-5: 1.5rem;
+  --s-6: 2rem;
+  --s-7: 3rem;
+  --s-8: 4.5rem;
+
+  /* ── 圆角：分层而非统一 ── */
+  --r-sharp: 2px;
+  --r-tight: 4px;
+  --r-card: 8px;
+  --r-panel: 12px;
+  --r-pill: 999px;
+
+  /* ── 动效 ── */
+  --dur-fast: 120ms;
+  --dur: 220ms;
+  --dur-slow: 420ms;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+  --ease-in-out: cubic-bezier(0.65, 0, 0.35, 1);
+
+  /* ── 层深 ── */
+  --shadow-1: 0 1px 2px oklch(0% 0 0 / 0.4);
+  --shadow-2: 0 4px 16px -4px oklch(0% 0 0 / 0.5);
+  --shadow-3: 0 16px 48px -12px oklch(0% 0 0 / 0.65);
+
+  --header-h: 56px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}

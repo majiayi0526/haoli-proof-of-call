@@ -1,0 +1,288 @@
+/* ── 认识论标签 ── */
+.epi {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 6px;
+  border-radius: var(--r-sharp);
+  border: 1px solid currentColor;
+  font-size: var(--t-micro);
+  font-weight: 600;
+  line-height: 1.5;
+  letter-spacing: 0.04em;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.epi--observed {
+  color: var(--observed);
+}
+.epi--derived {
+  color: var(--derived);
+}
+.epi--ruled {
+  color: var(--ruled);
+}
+.epi--asserted {
+  color: var(--asserted);
+}
+
+/* 估算量刻意做成实心块 —— 它不该和观测量长得一样 */
+.epi--estimated {
+  color: var(--bg-deep);
+  background: var(--estimated);
+  border-color: var(--estimated);
+}
+
+.epi--compact {
+  padding: 0 4px;
+  font-size: 0.625rem;
+}
+
+/* ── 置信度 ── */
+.conf {
+  display: inline-flex;
+  align-items: center;
+  gap: var(--s-2);
+}
+
+.conf__label {
+  color: var(--text-3);
+  font-size: var(--t-micro);
+}
+
+.conf__track {
+  position: relative;
+  display: block;
+  width: 68px;
+  height: 4px;
+  border-radius: var(--r-pill);
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.conf--sm .conf__track {
+  width: 44px;
+  height: 3px;
+}
+
+.conf__fill {
+  display: block;
+  height: 100%;
+  border-radius: var(--r-pill);
+  transform-origin: left;
+  transition: width var(--dur) var(--ease);
+}
+
+.conf__fill--high {
+  background: var(--ok);
+}
+.conf__fill--mid {
+  background: var(--warn);
+}
+.conf__fill--low {
+  background: var(--danger);
+}
+
+.conf__num {
+  min-width: 34px;
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  text-align: right;
+}
+
+/* ── 状态 ── */
+.status {
+  display: inline-flex;
+  align-items: center;
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  white-space: nowrap;
+  cursor: help;
+}
+
+.status--ai_proposed {
+  color: var(--text-3);
+  background: var(--surface-3);
+}
+.status--human_confirmed {
+  color: var(--bg-deep);
+  background: var(--confirmed);
+}
+.status--human_overridden {
+  color: var(--bg-deep);
+  background: var(--warn);
+}
+.status--disputed {
+  color: var(--warn);
+  border: 1px solid var(--warn-dim);
+}
+.status--insufficient {
+  color: var(--text-3);
+  border: 1px dashed var(--line);
+}
+
+/* ── 记分灯 ── */
+.lamps {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.lamps span {
+  display: block;
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  background: var(--surface-3);
+  border: 1px solid var(--line);
+  transition:
+    background var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.lamps--sm span {
+  width: 7px;
+  height: 7px;
+}
+.lamps--lg span {
+  width: 16px;
+  height: 16px;
+  border-radius: 3px;
+}
+
+.lamps__l.is-on {
+  background: var(--left);
+  border-color: var(--left);
+  box-shadow: 0 0 10px var(--left-glow);
+}
+
+.lamps__r.is-on {
+  background: var(--right);
+  border-color: var(--right);
+  box-shadow: 0 0 10px var(--right-glow);
+}
+
+.lamps__w.is-on {
+  background: var(--neutral);
+  border-color: var(--neutral);
+  box-shadow: 0 0 8px oklch(92% 0.006 255 / 0.3);
+}
+
+/* ── 面板 ── */
+.panel {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-radius: var(--r-panel);
+  overflow: hidden;
+}
+
+.panel__head {
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  gap: var(--s-3);
+  padding: var(--s-3) var(--s-4);
+  border-bottom: 1px solid var(--line-soft);
+  background: linear-gradient(to bottom, var(--surface-2), var(--surface));
+}
+
+.panel__titles {
+  min-width: 0;
+}
+
+.panel__title {
+  font-size: var(--t-small);
+  font-weight: 650;
+  letter-spacing: 0.02em;
+  color: var(--text);
+}
+
+.panel__sub {
+  margin-top: 2px;
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.5;
+}
+
+.panel__actions {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex-shrink: 0;
+}
+
+.panel__body {
+  flex: 1;
+  min-height: 0;
+  padding: var(--s-4);
+  overflow-y: auto;
+}
+
+.panel--dense .panel__body {
+  padding: var(--s-2);
+}
+
+/* ── Chip ── */
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 9px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  font-weight: 550;
+  white-space: nowrap;
+  transition:
+    background var(--dur-fast) var(--ease),
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+button.chip:hover {
+  background: var(--surface-3);
+  border-color: var(--text-4);
+  color: var(--text);
+}
+
+button.chip:active {
+  transform: scale(0.97);
+}
+
+.chip.is-active {
+  background: var(--text);
+  border-color: var(--text);
+  color: var(--bg-deep);
+}
+
+.chip--left {
+  color: var(--left);
+  border-color: var(--left-dim);
+}
+.chip--right {
+  color: var(--right);
+  border-color: var(--right-dim);
+}
+.chip--warn {
+  color: var(--warn);
+  border-color: var(--warn-dim);
+}
+.chip--ok {
+  color: var(--ok);
+  border-color: color-mix(in oklch, var(--ok) 45%, transparent);
+}
+
+.empty {
+  padding: var(--s-5) var(--s-3);
+  color: var(--text-4);
+  font-size: var(--t-small);
+  text-align: center;
+}

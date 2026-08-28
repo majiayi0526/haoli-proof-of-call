@@ -1,0 +1,223 @@
+.feed {
+  display: flex;
+  flex-direction: column;
+  min-height: 0;
+  gap: var(--s-2);
+}
+
+.feed__head {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  flex-shrink: 0;
+}
+
+.feed__count {
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 700;
+}
+
+.feed__hint {
+  color: var(--text-4);
+  font-size: 0.625rem;
+}
+
+.feed__empty {
+  padding: var(--s-4);
+  color: var(--text-4);
+  font-size: var(--t-small);
+  line-height: 1.7;
+}
+
+.feed__list {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  min-height: 0;
+  overflow-y: auto;
+  padding-right: 2px;
+  scroll-behavior: smooth;
+}
+
+/* ── 单条证据 ── */
+.fev {
+  display: grid;
+  grid-template-columns: 60px minmax(0, 1fr) auto;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  padding: 10px var(--s-3);
+  border-radius: var(--r-tight);
+  border: 1px solid transparent;
+  border-left: 3px solid var(--surface-3);
+  background: var(--surface);
+  text-align: left;
+  /* 只过渡合成器友好的属性；慢放时这条流一直在切状态 */
+  transition:
+    opacity var(--dur) var(--ease),
+    background var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    transform var(--dur-fast) var(--ease);
+}
+
+.fev:hover {
+  background: var(--surface-2);
+}
+
+.fev--left {
+  border-left-color: var(--left-dim);
+}
+.fev--right {
+  border-left-color: var(--right-dim);
+}
+
+/* 还没发生 */
+.fev--future {
+  opacity: 0.32;
+}
+
+/* 已经发生 */
+.fev--past {
+  opacity: 1;
+}
+
+/* 刚刚发生 —— 这一条是裁判此刻该看的 */
+.fev--flash {
+  opacity: 1;
+  background: var(--surface-2);
+  transform: translateX(2px);
+}
+
+.fev--left.fev--flash {
+  border-left-color: var(--left);
+  border-color: color-mix(in oklch, var(--left) 40%, transparent);
+  box-shadow: -6px 0 18px -8px var(--left-glow);
+}
+
+.fev--right.fev--flash {
+  border-left-color: var(--right);
+  border-color: color-mix(in oklch, var(--right) 40%, transparent);
+  box-shadow: -6px 0 18px -8px var(--right-glow);
+}
+
+/* 决定优先权的事件本身就该更重 */
+.fev--decisive .fev__headline {
+  font-weight: 650;
+}
+
+.fev--decisive .fev__time {
+  color: var(--text);
+}
+
+.fev--contextual {
+  opacity: 0.75;
+}
+.fev--contextual.fev--future {
+  opacity: 0.24;
+}
+
+.fev.is-focused {
+  border-color: var(--text-4);
+}
+
+/* ── 时间 ── */
+.fev__time {
+  color: var(--text-2);
+  font-size: var(--t-body);
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.fev__time em {
+  margin-left: 1px;
+  color: var(--text-4);
+  font-style: normal;
+  font-size: 0.5625rem;
+  font-weight: 500;
+}
+
+.fev--left .fev__time {
+  color: var(--left);
+}
+.fev--right .fev__time {
+  color: var(--right);
+}
+
+/* ── 正文 ── */
+.fev__body {
+  display: flex;
+  flex-direction: column;
+  gap: 1px;
+  min-width: 0;
+}
+
+.fev__headline {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--text);
+  font-size: var(--t-lead);
+  line-height: 1.35;
+}
+
+.fev__est {
+  padding: 0 4px;
+  border-radius: var(--r-sharp);
+  background: var(--estimated);
+  color: var(--bg-deep);
+  font-size: 0.5625rem;
+  font-weight: 700;
+  letter-spacing: 0.03em;
+}
+
+.fev__why {
+  color: var(--text-4);
+  font-size: var(--t-small);
+  line-height: 1.5;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+/* 完整说明在两种情况下展开：正在发生的那条（跟随播放），
+   以及裁判主动点选的那条（回看时要能读全）。
+   其余保持单行，否则列表会被说明文字撑得很长，失去「一眼扫完」的作用。 */
+.fev--flash .fev__why,
+.fev.is-focused .fev__why {
+  color: var(--text-3);
+  white-space: normal;
+}
+
+/* ── 右侧元信息 ── */
+.fev__meta {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+
+.fev__rule {
+  padding: 1px 5px;
+  border-radius: var(--r-sharp);
+  background: color-mix(in oklch, var(--ruled) 20%, transparent);
+  color: var(--ruled);
+  font-size: 0.5625rem;
+  font-weight: 700;
+}
+
+.fev__frame,
+.fev__conf {
+  color: var(--text-4);
+  font-size: 0.5625rem;
+}
+
+@media (max-width: 900px) {
+  .fev {
+    grid-template-columns: 48px minmax(0, 1fr);
+  }
+  .fev__meta {
+    display: none;
+  }
+}

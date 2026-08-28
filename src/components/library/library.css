@@ -1,0 +1,592 @@
+.lib {
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--s-5) var(--s-5) var(--s-8);
+}
+
+/* ══ 3 秒钩子 ══
+   海报设计里的 3-30-300 法则同样适用于首屏：3 秒抓住、30 秒说清、
+   3 分钟读细节。原先首屏被顶栏和导航占满，打开只看到一排按钮。
+   现在第一眼是一个任何人都会想回答的问题，第二眼是一个动作。 */
+.hook {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-6);
+  flex-wrap: wrap;
+  max-width: 1500px;
+  margin: 0 auto var(--s-6);
+  padding-bottom: var(--s-5);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.hook__q {
+  font-size: clamp(2rem, 1.1rem + 3.4vw, 4rem);
+  line-height: 1.15;
+  letter-spacing: -0.035em;
+  font-weight: 600;
+  color: var(--text-2);
+}
+
+.hook__q strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
+.hook__act {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: var(--s-2);
+  flex-shrink: 0;
+}
+
+.hook__cta {
+  padding: 13px 26px;
+  border-radius: var(--r-tight);
+  background: var(--text);
+  color: var(--bg-deep);
+  font-size: var(--t-lead);
+  font-weight: 700;
+  letter-spacing: 0.01em;
+  transition:
+    transform var(--dur-fast) var(--ease),
+    opacity var(--dur-fast) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.hook__cta:hover {
+  opacity: 0.9;
+  box-shadow: 0 8px 28px -10px oklch(95% 0.004 255 / 0.5);
+}
+
+.hook__cta:active {
+  transform: translateY(1px);
+}
+
+.hook__hint {
+  max-width: 34ch;
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.55;
+}
+
+@media (max-width: 860px) {
+  .hook {
+    align-items: flex-start;
+    gap: var(--s-4);
+    margin-bottom: var(--s-5);
+  }
+  .hook__act {
+    width: 100%;
+  }
+  .hook__cta {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+/* ── Hero ── */
+.lib__hero {
+  display: grid;
+  grid-template-columns: minmax(0, 1.7fr) minmax(280px, 0.85fr);
+  gap: var(--s-6);
+  max-width: 1500px;
+  margin: 0 auto var(--s-7);
+  align-items: start;
+}
+
+@media (max-width: 1000px) {
+  .lib__hero {
+    grid-template-columns: 1fr;
+  }
+}
+
+.lib__kicker {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.lib__heroText h1 {
+  margin: var(--s-3) 0 var(--s-4);
+  font-size: var(--t-h1);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.lib__lede {
+  max-width: 62ch;
+  color: var(--text-2);
+  font-size: var(--t-lead);
+  line-height: 1.75;
+}
+
+.lib__lede strong {
+  color: var(--text);
+  font-weight: 600;
+}
+
+/* 剑道端线与中线：把页面的分隔做成击剑场地的语言，而不是一条普通横线 */
+.lib__piste {
+  display: block;
+  width: 100%;
+  height: 12px;
+  margin: var(--s-6) 0 var(--s-5);
+  color: var(--line);
+}
+
+.lib__facts {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  gap: var(--s-4);
+  margin: 0;
+}
+
+.lib__facts div {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.lib__facts dt {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+}
+
+.lib__facts dd {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-3);
+  margin: 0;
+}
+
+.lib__facts dd strong {
+  color: var(--text);
+  font-size: var(--t-h2);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+}
+
+.lib__facts dd span {
+  color: var(--text-2);
+  font-size: var(--t-lead);
+  font-weight: 600;
+}
+
+.lib__facts dd span:first-child {
+  color: var(--left);
+}
+.lib__facts dd span:last-child {
+  color: var(--right);
+}
+
+.lib__facts p {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.5;
+}
+
+/* ── 上传 ── */
+.upl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-3);
+  padding: var(--s-5);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+}
+
+.upl__title {
+  font-size: var(--t-h3);
+  letter-spacing: -0.01em;
+}
+
+.upl__lede {
+  color: var(--text-3);
+  font-size: var(--t-small);
+  line-height: 1.65;
+}
+
+.upl__drop {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: var(--s-2);
+  min-height: 128px;
+  padding: var(--s-4);
+  border-radius: var(--r-card);
+  border: 1.5px dashed var(--line);
+  background: var(--bg-deep);
+  transition:
+    border-color var(--dur) var(--ease),
+    background var(--dur) var(--ease);
+}
+
+.upl__drop:hover:not(:disabled) {
+  border-color: var(--observed);
+  background: color-mix(in oklch, var(--observed) 5%, var(--bg-deep));
+}
+
+.upl__drop:disabled {
+  cursor: wait;
+}
+
+.upl__icon {
+  font-size: 1.6rem;
+  color: var(--text-4);
+}
+
+.upl__cta {
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+}
+
+.upl__hint {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+}
+
+.upl__pct {
+  color: var(--observed);
+  font-size: var(--t-h2);
+  font-weight: 700;
+}
+
+.upl__phase {
+  color: var(--text-3);
+  font-size: var(--t-micro);
+}
+
+.upl__bar {
+  width: 82%;
+  height: 3px;
+  border-radius: var(--r-pill);
+  background: var(--surface-3);
+  overflow: hidden;
+}
+
+.upl__fill {
+  display: block;
+  height: 100%;
+  background: var(--observed);
+  transition: width var(--dur) var(--ease);
+}
+
+.upl__note {
+  padding: var(--s-2) var(--s-3);
+  border-radius: var(--r-tight);
+  background: color-mix(in oklch, var(--warn) 10%, var(--bg-deep));
+  border-left: 2px solid var(--warn);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}
+
+.upl__disclosure {
+  padding-top: var(--s-3);
+  border-top: 1px dashed var(--line-soft);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.65;
+}
+
+.upl__disclosure strong {
+  color: var(--text-3);
+}
+
+/* ── 列表 ── */
+.lib__list {
+  max-width: 1500px;
+  margin: 0 auto;
+}
+
+.lib__listhead {
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+  gap: var(--s-4);
+  flex-wrap: wrap;
+  margin-bottom: var(--s-4);
+  padding-bottom: var(--s-4);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.lib__listhead h2 {
+  font-size: var(--t-h3);
+  letter-spacing: -0.01em;
+}
+
+.lib__listhead p {
+  margin-top: 4px;
+  max-width: 62ch;
+  color: var(--text-3);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+.lib__expandall {
+  flex-shrink: 0;
+  padding: 6px 13px;
+  border-radius: var(--r-tight);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  transition:
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.lib__expandall:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+/* ── 情境分组 ── */
+.lib__groups {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.grp {
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  overflow: hidden;
+  transition: border-color var(--dur) var(--ease);
+}
+
+.grp.is-open {
+  border-color: var(--line);
+  background: var(--bg-deep);
+}
+
+.grp__head {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  width: 100%;
+  padding: var(--s-3) var(--s-4);
+  text-align: left;
+  transition: background var(--dur-fast) var(--ease);
+}
+
+.grp__head:hover {
+  background: var(--surface-2);
+}
+
+.grp__caret {
+  flex-shrink: 0;
+  color: var(--text-4);
+  font-size: 0.72rem;
+  transition: transform var(--dur) var(--ease);
+}
+
+.grp__caret.is-open {
+  transform: rotate(90deg);
+}
+
+.grp__name {
+  flex-shrink: 0;
+  color: var(--text);
+  font-size: var(--t-lead);
+  font-weight: 650;
+  letter-spacing: -0.01em;
+}
+
+.grp__count {
+  flex-shrink: 0;
+  min-width: 22px;
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  background: var(--surface-3);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  text-align: center;
+}
+
+/* 该类判给哪边：直接用记分灯的颜色说话 */
+.grp__tally {
+  display: flex;
+  align-items: center;
+  gap: var(--s-2);
+  flex-shrink: 0;
+}
+
+.grp__t {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  font-weight: 600;
+}
+
+.grp__t i {
+  display: block;
+  width: 8px;
+  height: 8px;
+  border-radius: 2px;
+}
+
+.grp__t--left i {
+  background: var(--left);
+}
+.grp__t--right i {
+  background: var(--right);
+}
+.grp__t--sim i {
+  background: var(--neutral);
+}
+
+.grp__desc {
+  min-width: 0;
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.4;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+@media (max-width: 720px) {
+  .grp__desc {
+    display: none;
+  }
+}
+
+.lib__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(232px, 1fr));
+  gap: var(--s-3);
+  padding: 0 var(--s-4) var(--s-4);
+}
+
+/* ── 案例卡 ── */
+.ccard {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  border-radius: var(--r-card);
+  overflow: hidden;
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  text-align: left;
+  transition:
+    transform var(--dur) var(--ease),
+    border-color var(--dur) var(--ease),
+    box-shadow var(--dur) var(--ease);
+}
+
+.ccard:hover:not(:disabled) {
+  transform: translateY(-3px);
+  border-color: var(--text-4);
+  box-shadow: var(--shadow-2);
+}
+
+.ccard:disabled {
+  cursor: wait;
+  opacity: 0.75;
+}
+
+.ccard__thumb {
+  position: relative;
+  display: block;
+  aspect-ratio: 16 / 10;
+  background: var(--bg-deep);
+  overflow: hidden;
+}
+
+.ccard__thumb img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--dur-slow) var(--ease);
+}
+
+.ccard:hover .ccard__thumb img {
+  transform: scale(1.04);
+}
+
+.ccard__verdict {
+  position: absolute;
+  left: var(--s-2);
+  bottom: var(--s-2);
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 3px 8px;
+  border-radius: var(--r-pill);
+  background: oklch(8% 0 0 / 0.78);
+  backdrop-filter: blur(6px);
+  font-size: 0.625rem;
+  font-weight: 650;
+}
+
+.ccard__verdict--left {
+  color: var(--left);
+}
+.ccard__verdict--right {
+  color: var(--right);
+}
+.ccard__verdict--simultaneous,
+.ccard__verdict--insufficient {
+  color: var(--text-2);
+}
+
+.ccard__busy {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: oklch(10% 0 0 / 0.72);
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+}
+
+.ccard__body {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: var(--s-3);
+}
+
+.ccard__title {
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+  line-height: 1.4;
+}
+
+.ccard__meta {
+  color: var(--text-4);
+  font-size: 0.625rem;
+}
+
+/* 线上未分发转播画面的案例标记。
+   刻意把「证据链完整」写进标签本身：只写「无画面」会读成缺陷，
+   而这里缺的恰恰是本产品不负责的那一层。 */
+.ccard__nofilm {
+  position: absolute;
+  left: 0.5rem;
+  bottom: 0.5rem;
+  padding: 0.2rem 0.45rem;
+  border-radius: 999px;
+  font-size: 0.65rem;
+  line-height: 1.4;
+  letter-spacing: 0.02em;
+  color: var(--text-3);
+  background: oklch(11% 0.008 255 / 0.82);
+  border: 1px solid var(--line-soft);
+  backdrop-filter: blur(4px);
+}

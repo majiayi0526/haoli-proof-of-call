@@ -1,0 +1,42 @@
+{
+  "name": "proof-of-call",
+  "private": true,
+  "version": "0.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --port 5174 --strictPort",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 5174",
+    "lint": "oxlint src tools",
+    "typecheck": "tsc --noEmit -p tsconfig.app.json",
+    "scan": "python3 tools/scan_dataset.py",
+    "extract": "python3 tools/extract_pose_yolo.py",
+    "extract:all": "python3 tools/extract_pose_yolo.py --batch tools/dataset_manifest.json -o data/tracks",
+    "cases": "python3 tools/build_cases.py --per-scenario 3 --max 14",
+    "bench": "tsx tools/benchmark.ts",
+    "verify": "tsx tools/verify.ts",
+    "data": "npm run cases && npm run bench",
+    "assets": "bash tools/fetch_assets.sh",
+    "setup": "npm install && npm run assets",
+    "build:public": "VITE_PUBLIC_BUILD=1 tsc -b && VITE_PUBLIC_BUILD=1 vite build && node tools/prune-clips.mjs",
+    "preview:public": "vite preview --port 4173 --strictPort",
+    "deploy": "npm run build:public && node tools/deploy-static.mjs"
+  },
+  "dependencies": {
+    "@mediapipe/tasks-vision": "^1.0.1",
+    "react": "^19.2.8",
+    "react-dom": "^19.2.8",
+    "zustand": "^5.0.15"
+  },
+  "devDependencies": {
+    "@types/node": "^24.13.3",
+    "@types/react": "^19.2.18",
+    "@types/react-dom": "^19.2.4",
+    "@vitejs/plugin-react": "^6.1.0",
+    "oxlint": "^1.79.0",
+    "tsx": "^4.23.12",
+    "typescript": "~6.0.2",
+    "vite": "^8.2.2"
+  },
+  "description": "毫厘 · PROOF OF CALL —— 佩剑对攻判罚的证据链系统"
+}

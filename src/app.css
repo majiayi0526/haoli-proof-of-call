@@ -1,0 +1,277 @@
+.app {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  min-height: 0;
+}
+
+/* ── 顶栏 ── */
+.app__bar {
+  display: flex;
+  align-items: center;
+  gap: var(--s-4);
+  height: var(--header-h);
+  padding: 0 var(--s-5);
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--surface);
+  flex-shrink: 0;
+  /* 顶栏里的弹出面板要能盖住下面的内容 */
+  position: relative;
+  z-index: 30;
+}
+
+.app__spacer {
+  flex: 1;
+  min-width: var(--s-2);
+}
+
+.app__blades {
+  color: var(--text-2);
+  flex-shrink: 0;
+}
+
+.app__brand:hover .app__blades {
+  color: var(--text);
+}
+
+.app__brand {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+}
+
+.app__name {
+  display: flex;
+  align-items: baseline;
+  gap: var(--s-2);
+  color: var(--text);
+  font-size: var(--t-lead);
+  font-weight: 700;
+  letter-spacing: 0.04em;
+}
+
+.app__en {
+  color: var(--text-4);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-weight: 600;
+  letter-spacing: 0.16em;
+}
+
+.app__nav {
+  display: flex;
+  gap: 2px;
+}
+
+.app__nav button {
+  padding: 6px 13px;
+  border-radius: var(--r-tight);
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  transition:
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.app__nav button:hover {
+  color: var(--text);
+  background: var(--surface-2);
+}
+
+.app__nav button.is-active {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.app__error {
+  display: flex;
+  gap: var(--s-2);
+  padding: var(--s-2) var(--s-5);
+  background: color-mix(in oklch, var(--danger) 14%, var(--bg));
+  border-bottom: 1px solid var(--danger);
+  color: var(--text);
+  font-size: var(--t-micro);
+}
+
+.app__error span {
+  color: var(--text-3);
+}
+
+.app__main {
+  flex: 1;
+  min-height: 0;
+  overflow: hidden;
+}
+
+/* 窄屏收缩顺序：先收装饰，再收次要标签，永远保留「当前处于什么状态」。
+   把选中的剑种也收成图标会让人不知道自己在看哪个剑种——那是信息，不是装饰。 */
+@media (max-width: 1180px) {
+  .app__en {
+    display: none;
+  }
+  .app__spacer {
+    min-width: 0;
+  }
+  /* 未选中的剑种只留图标，选中的保留文字 */
+  .wsw__btn:not(.is-active) .wsw__name,
+  .wsw__soon {
+    display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  /* 极窄屏才连选中的剑种文字一起收，此时图标加高亮足以表达当前状态 */
+  .wsw__btn .wsw__name {
+    display: none;
+  }
+  .sbox__btn::after {
+    content: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .app__bar {
+    height: auto;
+    padding: var(--s-2) var(--s-3);
+    flex-wrap: wrap;
+    gap: var(--s-2);
+  }
+  .app__spacer {
+    display: none;
+  }
+  .app__nav {
+    order: 3;
+    width: 100%;
+    overflow-x: auto;
+    padding-bottom: 2px;
+  }
+  .app__nav button {
+    flex-shrink: 0;
+  }
+}
+
+
+/* ══ 触摸目标 ══
+   指尖接触面约 44pt，而桌面按钮做到 25px 高就够用了。
+   在触摸设备上不放大，点击会频繁误触相邻按钮——尤其顶栏这排
+   剑种切换，三个按钮挨在一起，点错就切走了整个上下文。 */
+@media (pointer: coarse), (max-width: 820px) {
+  .app__nav button,
+  .app__brand {
+    min-height: 40px;
+    padding-inline: var(--s-3);
+  }
+
+  .wsw__btn {
+    min-height: 38px;
+    padding-inline: 11px;
+  }
+
+  .sbox__btn,
+  .acct__btn {
+    min-height: 38px;
+    padding-inline: 11px;
+  }
+
+  /* 传输条是裁决台的核心操作，逐帧按钮必须点得中 */
+  .transport__btn {
+    min-height: 40px;
+    min-width: 44px;
+  }
+
+  .transport__btn--play {
+    min-width: 84px;
+  }
+
+  .transport__scrub {
+    height: 6px;
+  }
+
+  .transport__scrub::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+  }
+
+  .transport__scrub::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* 分组标题整行可点，给足高度 */
+  .grp__head,
+  .lib__expandall,
+  .wb__tl > summary,
+  .wb__deep > summary {
+    min-height: 46px;
+  }
+
+  .wb__tabs button {
+    min-height: 40px;
+  }
+
+  /* 假设滑块 */
+  .asm__range {
+    height: 6px;
+  }
+
+  .asm__range::-webkit-slider-thumb {
+    width: 22px;
+    height: 22px;
+  }
+
+  .asm__range::-moz-range-thumb {
+    width: 22px;
+    height: 22px;
+  }
+
+  /* 证据条整条可点 */
+  .fev {
+    min-height: 52px;
+  }
+
+  .cnode__head {
+    min-height: 46px;
+  }
+
+  .cnode__act,
+  .conflict__link,
+  .rb__jumps button,
+  .verdict__jumpbtn {
+    min-height: 34px;
+    padding-inline: 12px;
+  }
+
+  .wb__back,
+  .replay__capture,
+  .verdict__caveattoggle,
+  .rb__link,
+  .lib__filters button {
+    min-height: 40px;
+  }
+
+  /* 规则原文链接是「可核对」这条主张的落点，
+     手指点不中等于这条主张在手机上不成立 */
+  .rule__link,
+  .mth__rulecode {
+    min-height: 34px;
+    display: inline-flex;
+    align-items: center;
+    padding-inline: 10px;
+  }
+
+  /* 时间轴上的事件标记视觉上必须小（几十个挤在一条轴上），
+     但可点区域可以比视觉大——用透明内边距撑开命中范围，
+     不改变它在轴上的视觉位置。 */
+  .tl__ev {
+    padding: 10px 8px;
+  }
+
+  /* 滑块本体做得细才好看，但 range 的命中区靠 thumb 尺寸保证，
+     再加一层竖向内边距让手指更容易抓到 */
+  .transport__scrub,
+  .asm__range {
+    padding-block: 10px;
+    background-clip: content-box;
+  }
+}

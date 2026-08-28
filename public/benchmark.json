@@ -1,0 +1,4441 @@
+{
+  "generatedAt": "2026-08-28T09:21:07.670Z",
+  "doctrineComparison": {
+    "sidedCases": 121,
+    "fie": {
+      "decided": 88,
+      "agree": 51,
+      "rate": 0.58
+    },
+    "practice": {
+      "decided": 88,
+      "agree": 39,
+      "rate": 0.443
+    }
+  },
+  "assumptions": [
+    {
+      "id": "arm_ext_rate",
+      "value": 120,
+      "unit": "°/s"
+    },
+    {
+      "id": "arm_ext_hold",
+      "value": 3,
+      "unit": "帧"
+    },
+    {
+      "id": "foot_start_speed",
+      "value": 0.55,
+      "unit": "tl/s"
+    },
+    {
+      "id": "foot_start_hold",
+      "value": 3,
+      "unit": "帧"
+    },
+    {
+      "id": "simultaneity_window",
+      "value": 40,
+      "unit": "ms"
+    },
+    {
+      "id": "blade_tip_ratio",
+      "value": 1.8,
+      "unit": "tl"
+    },
+    {
+      "id": "landing_settle_speed",
+      "value": 0.25,
+      "unit": "tl/s"
+    },
+    {
+      "id": "withdraw_drop",
+      "value": 12,
+      "unit": "°"
+    }
+  ],
+  "totals": {
+    "cases": 131,
+    "labelled": 130,
+    "decided": 105,
+    "simultaneous": 9,
+    "insufficient": 25
+  },
+  "accuracy": {
+    "overall": 0.392,
+    "whenDecided": 0.486,
+    "decidedCount": 105,
+    "decidedAgree": 51,
+    "agreeCount": 51
+  },
+  "doctrineDisagreement": {
+    "count": 88,
+    "rate": 0.672,
+    "ids": [
+      "attack_derobement__右_10",
+      "attack_derobement__右_15",
+      "attack_derobement__右_4",
+      "attack_derobement__右_6",
+      "attack_derobement__右_7",
+      "attack_derobement__右_8",
+      "attack_derobement__右_9",
+      "attack_derobement__右s",
+      "attack_derobement__左_11",
+      "attack_derobement__左_13",
+      "attack_derobement__左_14",
+      "attack_derobement__左_15",
+      "attack_derobement__左_16",
+      "attack_derobement__左_2",
+      "attack_derobement__左_4",
+      "attack_derobement__左_5",
+      "attack_derobement__左_8",
+      "attack_no__左",
+      "attack_no__左_2",
+      "attack_no__左_4",
+      "attack_no__左_6",
+      "direct_attack__右",
+      "direct_attack__右_2",
+      "preparation_vs_attack__右",
+      "preparation_vs_attack__右_11",
+      "preparation_vs_attack__右_12",
+      "preparation_vs_attack__右_14",
+      "preparation_vs_attack__右_15",
+      "preparation_vs_attack__右_17",
+      "preparation_vs_attack__右_19",
+      "preparation_vs_attack__右_20",
+      "preparation_vs_attack__右_21",
+      "preparation_vs_attack__右_22",
+      "preparation_vs_attack__右_23",
+      "preparation_vs_attack__右_3",
+      "preparation_vs_attack__右_8",
+      "preparation_vs_attack__右_9",
+      "preparation_vs_attack__左",
+      "preparation_vs_attack__左_12",
+      "preparation_vs_attack__左_13",
+      "preparation_vs_attack__左_15",
+      "preparation_vs_attack__左_3",
+      "preparation_vs_attack__左_4",
+      "preparation_vs_attack__左_7",
+      "preparation_vs_attack__左s",
+      "preparation_vs_attack__左s_2",
+      "preparation_vs_attack__左s_3",
+      "preparation_vs_attack__左s_4",
+      "remise__右_2",
+      "remise__左",
+      "remise__左_3",
+      "retreat_counter__右_3",
+      "retreat_counter__右_5",
+      "retreat_counter__右s（不成立）",
+      "retreat_counter__左_2",
+      "retreat_counter__左s",
+      "simultaneous__SVID_20240813_225935_1",
+      "simultaneous__SVID_20240815_132509_1",
+      "simultaneous__SVID_20240815_133611_1",
+      "simultaneous__SVID_20240830_213522_1",
+      "simultaneous__SVID_20240831_121523_1",
+      "simultaneous__SVID_20240909_134457_1",
+      "simultaneous__SVID_20240911_104202_1",
+      "simultaneous__fc10187eb71ad8c83d882873a1db20df",
+      "simultaneous_start__右",
+      "simultaneous_start__右_10",
+      "simultaneous_start__右_11",
+      "simultaneous_start__右_12",
+      "simultaneous_start__右_13",
+      "simultaneous_start__右_14",
+      "simultaneous_start__右_2",
+      "simultaneous_start__右_3",
+      "simultaneous_start__右_4",
+      "simultaneous_start__右_5",
+      "simultaneous_start__右_6",
+      "simultaneous_start__右_7",
+      "simultaneous_start__右s_3",
+      "simultaneous_start__右s_4",
+      "simultaneous_start__右s_5",
+      "simultaneous_start__左",
+      "simultaneous_start__左_10",
+      "simultaneous_start__左_3",
+      "simultaneous_start__左_4",
+      "simultaneous_start__左_8",
+      "simultaneous_start__左_9",
+      "simultaneous_start__左s",
+      "withdraw_arm__右_3",
+      "withdraw_arm__右s"
+    ]
+  },
+  "abstention": {
+    "simultaneousIds": [
+      "attack_derobement__右_11",
+      "attack_derobement__右_3",
+      "attack_derobement__右_6",
+      "direct_attack__右_2",
+      "preparation_vs_attack__右_8",
+      "remise__左",
+      "retreat_counter__左",
+      "simultaneous_start__右_15",
+      "simultaneous_start__右_6"
+    ],
+    "insufficientIds": [
+      "attack_derobement__右_9",
+      "attack_derobement__右s",
+      "attack_derobement__左_14",
+      "attack_no__右",
+      "attack_no__左_2",
+      "attack_no__左_6",
+      "preparation_vs_attack__右_12",
+      "preparation_vs_attack__右_19",
+      "preparation_vs_attack__右_2",
+      "preparation_vs_attack__右_23",
+      "preparation_vs_attack__左_3",
+      "preparation_vs_attack__左_4",
+      "preparation_vs_attack__左s",
+      "preparation_vs_attack__左s_4",
+      "retreat_counter__右_5",
+      "retreat_counter__右s（不成立）",
+      "simultaneous__SVID_20240830_213522_1",
+      "simultaneous_start__右_12",
+      "simultaneous_start__右_16",
+      "simultaneous_start__右_2",
+      "simultaneous_start__右_4",
+      "simultaneous_start__右s_5",
+      "simultaneous_start__左",
+      "simultaneous_start__左_3",
+      "simultaneous_start__左_9"
+    ],
+    "rate": 0.26
+  },
+  "fragile": {
+    "count": 71,
+    "ids": [
+      "attack_derobement__右_10",
+      "attack_derobement__右_11",
+      "attack_derobement__右_12",
+      "attack_derobement__右_13",
+      "attack_derobement__右_14",
+      "attack_derobement__右_15",
+      "attack_derobement__右_3",
+      "attack_derobement__右_4",
+      "attack_derobement__右_6",
+      "attack_derobement__左_13",
+      "attack_derobement__左_15",
+      "attack_derobement__左_16",
+      "attack_derobement__左_2",
+      "attack_derobement__左_4",
+      "attack_derobement__左_5",
+      "attack_derobement__左_8",
+      "attack_derobement__左_9",
+      "direct_attack__右_2",
+      "parry_riposte__右",
+      "preparation_vs_attack__右",
+      "preparation_vs_attack__右_11",
+      "preparation_vs_attack__右_13",
+      "preparation_vs_attack__右_14",
+      "preparation_vs_attack__右_15",
+      "preparation_vs_attack__右_7",
+      "preparation_vs_attack__右_8",
+      "preparation_vs_attack__右_9",
+      "preparation_vs_attack__右s",
+      "preparation_vs_attack__左_12",
+      "preparation_vs_attack__左_13",
+      "preparation_vs_attack__左_16",
+      "preparation_vs_attack__左_17",
+      "preparation_vs_attack__左_7",
+      "preparation_vs_attack__左_9",
+      "preparation_vs_attack__左s_2",
+      "preparation_vs_attack__左s_3",
+      "remise__左",
+      "remise__左_3",
+      "retreat_counter__右",
+      "retreat_counter__右_6",
+      "retreat_counter__右（不成立）",
+      "retreat_counter__左",
+      "retreat_counter__左_2",
+      "retreat_counter__左s",
+      "retreat_counter__左不成立）",
+      "simultaneous__SVID_20240813_225935_1",
+      "simultaneous__SVID_20240815_132509_1",
+      "simultaneous__SVID_20240815_133611_1",
+      "simultaneous__SVID_20240817_201114_1",
+      "simultaneous__SVID_20240831_121523_1",
+      "simultaneous__SVID_20240909_134457_1",
+      "simultaneous__SVID_20240911_104202_1",
+      "simultaneous__fc10187eb71ad8c83d882873a1db20df",
+      "simultaneous_start__右",
+      "simultaneous_start__右_10",
+      "simultaneous_start__右_11",
+      "simultaneous_start__右_14",
+      "simultaneous_start__右_15",
+      "simultaneous_start__右_3",
+      "simultaneous_start__右_5",
+      "simultaneous_start__右_6",
+      "simultaneous_start__右_7",
+      "simultaneous_start__右_8",
+      "simultaneous_start__右s_2",
+      "simultaneous_start__左_4",
+      "simultaneous_start__左_5",
+      "simultaneous_start__左_8",
+      "withdraw_arm__右",
+      "withdraw_arm__右_3",
+      "withdraw_arm__右s",
+      "withdraw_arm__左"
+    ]
+  },
+  "byScenario": [
+    {
+      "scenario": "abandoned",
+      "scenarioZh": "放弃",
+      "total": 1,
+      "labelled": 0,
+      "decided": 1,
+      "decidedLabelled": 0,
+      "agree": 0,
+      "disagreeDoctrines": 0,
+      "simultaneous": 0,
+      "insufficient": 0,
+      "meanValidCoverage": 0.669,
+      "ids": [
+        "abandoned__petal_20240911_131418"
+      ]
+    },
+    {
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "total": 26,
+      "labelled": 26,
+      "decided": 20,
+      "decidedLabelled": 23,
+      "agree": 10,
+      "disagreeDoctrines": 17,
+      "simultaneous": 3,
+      "insufficient": 3,
+      "meanValidCoverage": 0.48,
+      "ids": [
+        "attack_derobement__右_10",
+        "attack_derobement__右_11",
+        "attack_derobement__右_12",
+        "attack_derobement__右_13",
+        "attack_derobement__右_14",
+        "attack_derobement__右_15",
+        "attack_derobement__右_3",
+        "attack_derobement__右_4",
+        "attack_derobement__右_5",
+        "attack_derobement__右_6",
+        "attack_derobement__右_7",
+        "attack_derobement__右_8",
+        "attack_derobement__右_9",
+        "attack_derobement__右s",
+        "attack_derobement__右s_2",
+        "attack_derobement__左_11",
+        "attack_derobement__左_13",
+        "attack_derobement__左_14",
+        "attack_derobement__左_15",
+        "attack_derobement__左_16",
+        "attack_derobement__左_2",
+        "attack_derobement__左_3",
+        "attack_derobement__左_4",
+        "attack_derobement__左_5",
+        "attack_derobement__左_8",
+        "attack_derobement__左_9"
+      ]
+    },
+    {
+      "scenario": "attack_no",
+      "scenarioZh": "进攻一次没有",
+      "total": 5,
+      "labelled": 5,
+      "decided": 2,
+      "decidedLabelled": 2,
+      "agree": 1,
+      "disagreeDoctrines": 4,
+      "simultaneous": 0,
+      "insufficient": 3,
+      "meanValidCoverage": 0.388,
+      "ids": [
+        "attack_no__右",
+        "attack_no__左",
+        "attack_no__左_2",
+        "attack_no__左_4",
+        "attack_no__左_6"
+      ]
+    },
+    {
+      "scenario": "direct_attack",
+      "scenarioZh": "直接进攻",
+      "total": 2,
+      "labelled": 2,
+      "decided": 1,
+      "decidedLabelled": 2,
+      "agree": 1,
+      "disagreeDoctrines": 2,
+      "simultaneous": 1,
+      "insufficient": 0,
+      "meanValidCoverage": 0.296,
+      "ids": [
+        "direct_attack__右",
+        "direct_attack__右_2"
+      ]
+    },
+    {
+      "scenario": "parry_riposte",
+      "scenarioZh": "防守还击·返还击",
+      "total": 1,
+      "labelled": 1,
+      "decided": 1,
+      "decidedLabelled": 1,
+      "agree": 1,
+      "disagreeDoctrines": 0,
+      "simultaneous": 0,
+      "insufficient": 0,
+      "meanValidCoverage": 0.137,
+      "ids": [
+        "parry_riposte__右"
+      ]
+    },
+    {
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "total": 36,
+      "labelled": 36,
+      "decided": 27,
+      "decidedLabelled": 28,
+      "agree": 15,
+      "disagreeDoctrines": 25,
+      "simultaneous": 1,
+      "insufficient": 8,
+      "meanValidCoverage": 0.415,
+      "ids": [
+        "preparation_vs_attack__右",
+        "preparation_vs_attack__右_11",
+        "preparation_vs_attack__右_12",
+        "preparation_vs_attack__右_13",
+        "preparation_vs_attack__右_14",
+        "preparation_vs_attack__右_15",
+        "preparation_vs_attack__右_17",
+        "preparation_vs_attack__右_18",
+        "preparation_vs_attack__右_19",
+        "preparation_vs_attack__右_2",
+        "preparation_vs_attack__右_20",
+        "preparation_vs_attack__右_21",
+        "preparation_vs_attack__右_22",
+        "preparation_vs_attack__右_23",
+        "preparation_vs_attack__右_3",
+        "preparation_vs_attack__右_7",
+        "preparation_vs_attack__右_8",
+        "preparation_vs_attack__右_9",
+        "preparation_vs_attack__右s",
+        "preparation_vs_attack__左",
+        "preparation_vs_attack__左_12",
+        "preparation_vs_attack__左_13",
+        "preparation_vs_attack__左_14",
+        "preparation_vs_attack__左_15",
+        "preparation_vs_attack__左_16",
+        "preparation_vs_attack__左_17",
+        "preparation_vs_attack__左_3",
+        "preparation_vs_attack__左_4",
+        "preparation_vs_attack__左_5",
+        "preparation_vs_attack__左_7",
+        "preparation_vs_attack__左_8",
+        "preparation_vs_attack__左_9",
+        "preparation_vs_attack__左s",
+        "preparation_vs_attack__左s_2",
+        "preparation_vs_attack__左s_3",
+        "preparation_vs_attack__左s_4"
+      ]
+    },
+    {
+      "scenario": "remise",
+      "scenarioZh": "重复进攻",
+      "total": 3,
+      "labelled": 3,
+      "decided": 2,
+      "decidedLabelled": 3,
+      "agree": 1,
+      "disagreeDoctrines": 3,
+      "simultaneous": 1,
+      "insufficient": 0,
+      "meanValidCoverage": 0.308,
+      "ids": [
+        "remise__右_2",
+        "remise__左",
+        "remise__左_3"
+      ]
+    },
+    {
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "total": 12,
+      "labelled": 12,
+      "decided": 9,
+      "decidedLabelled": 10,
+      "agree": 4,
+      "disagreeDoctrines": 5,
+      "simultaneous": 1,
+      "insufficient": 2,
+      "meanValidCoverage": 0.438,
+      "ids": [
+        "retreat_counter__右",
+        "retreat_counter__右_2",
+        "retreat_counter__右_3",
+        "retreat_counter__右_4",
+        "retreat_counter__右_5",
+        "retreat_counter__右_6",
+        "retreat_counter__右s（不成立）",
+        "retreat_counter__右（不成立）",
+        "retreat_counter__左",
+        "retreat_counter__左_2",
+        "retreat_counter__左s",
+        "retreat_counter__左不成立）"
+      ]
+    },
+    {
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "total": 9,
+      "labelled": 9,
+      "decided": 8,
+      "decidedLabelled": 8,
+      "agree": 0,
+      "disagreeDoctrines": 8,
+      "simultaneous": 0,
+      "insufficient": 1,
+      "meanValidCoverage": 0.408,
+      "ids": [
+        "simultaneous__SVID_20240813_225935_1",
+        "simultaneous__SVID_20240815_132509_1",
+        "simultaneous__SVID_20240815_133611_1",
+        "simultaneous__SVID_20240817_201114_1",
+        "simultaneous__SVID_20240830_213522_1",
+        "simultaneous__SVID_20240831_121523_1",
+        "simultaneous__SVID_20240909_134457_1",
+        "simultaneous__SVID_20240911_104202_1",
+        "simultaneous__fc10187eb71ad8c83d882873a1db20df"
+      ]
+    },
+    {
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "total": 32,
+      "labelled": 32,
+      "decided": 22,
+      "decidedLabelled": 24,
+      "agree": 16,
+      "disagreeDoctrines": 22,
+      "simultaneous": 2,
+      "insufficient": 8,
+      "meanValidCoverage": 0.353,
+      "ids": [
+        "simultaneous_start__右",
+        "simultaneous_start__右_10",
+        "simultaneous_start__右_11",
+        "simultaneous_start__右_12",
+        "simultaneous_start__右_13",
+        "simultaneous_start__右_14",
+        "simultaneous_start__右_15",
+        "simultaneous_start__右_16",
+        "simultaneous_start__右_17",
+        "simultaneous_start__右_18",
+        "simultaneous_start__右_19",
+        "simultaneous_start__右_2",
+        "simultaneous_start__右_3",
+        "simultaneous_start__右_4",
+        "simultaneous_start__右_5",
+        "simultaneous_start__右_6",
+        "simultaneous_start__右_7",
+        "simultaneous_start__右_8",
+        "simultaneous_start__右_9",
+        "simultaneous_start__右s",
+        "simultaneous_start__右s_2",
+        "simultaneous_start__右s_3",
+        "simultaneous_start__右s_4",
+        "simultaneous_start__右s_5",
+        "simultaneous_start__左",
+        "simultaneous_start__左_10",
+        "simultaneous_start__左_3",
+        "simultaneous_start__左_4",
+        "simultaneous_start__左_5",
+        "simultaneous_start__左_8",
+        "simultaneous_start__左_9",
+        "simultaneous_start__左s"
+      ]
+    },
+    {
+      "scenario": "withdraw_arm",
+      "scenarioZh": "转换·收手",
+      "total": 4,
+      "labelled": 4,
+      "decided": 4,
+      "decidedLabelled": 4,
+      "agree": 2,
+      "disagreeDoctrines": 2,
+      "simultaneous": 0,
+      "insufficient": 0,
+      "meanValidCoverage": 0.363,
+      "ids": [
+        "withdraw_arm__右",
+        "withdraw_arm__右_3",
+        "withdraw_arm__右s",
+        "withdraw_arm__左"
+      ]
+    }
+  ],
+  "cases": [
+    {
+      "id": "abandoned__petal_20240911_131418",
+      "scenario": "abandoned",
+      "scenarioZh": "放弃",
+      "expertVerdict": "unlabeled",
+      "verdict": "left",
+      "confidence": 0.643,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -167,
+      "practiceDeltaMs": -104,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": null,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.669,
+      "bothCoverage": 0.945,
+      "robustness": 0.654,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__右_10",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 950,
+      "practiceDeltaMs": -186,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.61,
+      "bothCoverage": 0.9,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_11",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.824,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -29,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.495,
+      "bothCoverage": 0.885,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "simultaneity_window",
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_12",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.666,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -1668,
+      "practiceDeltaMs": -353,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.238,
+      "bothCoverage": 0.912,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_13",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.659,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -1263,
+      "practiceDeltaMs": -52,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.margin.practice_footfirst",
+          "severity": "medium",
+          "title": "实践口径的时差贴近可分辨阈值"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.776,
+      "bothCoverage": 0.962,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_14",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.854,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 287,
+      "practiceDeltaMs": 686,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.343,
+      "bothCoverage": 0.773,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_15",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.849,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -2693,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.233,
+      "bothCoverage": 0.926,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_3",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.792,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 33,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.692,
+      "bothCoverage": 0.791,
+      "robustness": 0.054,
+      "decisiveAssumptions": [
+        "simultaneity_window"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_4",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.674,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 965,
+      "practiceDeltaMs": -34,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.265,
+      "bothCoverage": 0.397,
+      "robustness": 0.132,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_5",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.819,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 849,
+      "practiceDeltaMs": 749,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.631,
+      "bothCoverage": 0.652,
+      "robustness": 0.299,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__右_6",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.861,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 0,
+      "practiceDeltaMs": 240,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.264,
+      "bothCoverage": 1,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__右_7",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 533,
+      "practiceDeltaMs": -55,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.margin.practice_footfirst",
+          "severity": "medium",
+          "title": "实践口径的时差贴近可分辨阈值"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.261,
+      "bothCoverage": 0.798,
+      "robustness": 0.174,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__右_8",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.8,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 836,
+      "practiceDeltaMs": -36,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.901,
+      "bothCoverage": 0.981,
+      "robustness": 0.215,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__右_9",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "right",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 173,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.368,
+      "bothCoverage": 0.617,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__右s",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "right",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 151,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.259,
+      "bothCoverage": 0.909,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__右s_2",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.795,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -403,
+      "practiceDeltaMs": -535,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.518,
+      "bothCoverage": 0.752,
+      "robustness": 0.201,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__左_11",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -815,
+      "practiceDeltaMs": 267,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.085,
+      "bothCoverage": 0.679,
+      "robustness": 0.257,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__左_13",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.51,
+      "fieVerdict": "right",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": 2021,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.716,
+      "bothCoverage": 0.772,
+      "robustness": 0.09,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_14",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -1264,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.659,
+      "bothCoverage": 0.867,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__左_15",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -105,
+      "practiceDeltaMs": 80,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.698,
+      "bothCoverage": 0.771,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_16",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.874,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 1040,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.607,
+      "bothCoverage": 0.929,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_2",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.393,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -656,
+      "practiceDeltaMs": 21,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.538,
+      "bothCoverage": 0.762,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_3",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.644,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -754,
+      "practiceDeltaMs": -648,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.442,
+      "bothCoverage": 0.841,
+      "robustness": 0.201,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_derobement__左_4",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.598,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 761,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.459,
+      "bothCoverage": 0.972,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_5",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.699,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 666,
+      "practiceDeltaMs": -18,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.413,
+      "bothCoverage": 0.653,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_8",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 1108,
+      "practiceDeltaMs": -50,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.margin.practice_footfirst",
+          "severity": "medium",
+          "title": "实践口径的时差贴近可分辨阈值"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.412,
+      "bothCoverage": 0.892,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_derobement__左_9",
+      "scenario": "attack_derobement",
+      "scenarioZh": "对攻·转换",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.737,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 851,
+      "practiceDeltaMs": 66,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.608,
+      "bothCoverage": 0.898,
+      "robustness": 0.132,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "attack_no__右",
+      "scenario": "attack_no",
+      "scenarioZh": "进攻一次没有",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.179,
+      "bothCoverage": 0.729,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_no__左",
+      "scenario": "attack_no",
+      "scenarioZh": "进攻一次没有",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.073,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -808,
+      "practiceDeltaMs": 154,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.618,
+      "bothCoverage": 0.939,
+      "robustness": 0.174,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_no__左_2",
+      "scenario": "attack_no",
+      "scenarioZh": "进攻一次没有",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -353,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.167,
+      "bothCoverage": 0.479,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_no__左_4",
+      "scenario": "attack_no",
+      "scenarioZh": "进攻一次没有",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.76,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 1111,
+      "practiceDeltaMs": 17,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.542,
+      "bothCoverage": 0.795,
+      "robustness": 0.174,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "attack_no__左_6",
+      "scenario": "attack_no",
+      "scenarioZh": "进攻一次没有",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -105,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        }
+      ],
+      "validCoverage": 0.435,
+      "bothCoverage": 0.675,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "direct_attack__右",
+      "scenario": "direct_attack",
+      "scenarioZh": "直接进攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 142,
+      "practiceDeltaMs": -971,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.252,
+      "bothCoverage": 0.732,
+      "robustness": 0.299,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "direct_attack__右_2",
+      "scenario": "direct_attack",
+      "scenarioZh": "直接进攻",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.746,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 0,
+      "practiceDeltaMs": 661,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.339,
+      "bothCoverage": 0.815,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "parry_riposte__右",
+      "scenario": "parry_riposte",
+      "scenarioZh": "防守还击·返还击",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.512,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 749,
+      "practiceDeltaMs": 145,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.137,
+      "bothCoverage": 0.432,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.606,
+      "fieVerdict": "right",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": 245,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.5,
+      "bothCoverage": 0.682,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_11",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 363,
+      "practiceDeltaMs": -74,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.136,
+      "bothCoverage": 0.888,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_12",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -19,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.565,
+      "bothCoverage": 1,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_13",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.626,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 817,
+      "practiceDeltaMs": 634,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        }
+      ],
+      "validCoverage": 0.604,
+      "bothCoverage": 0.604,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_14",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 117,
+      "practiceDeltaMs": -250,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.179,
+      "bothCoverage": 0.866,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_15",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -830,
+      "practiceDeltaMs": 106,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.485,
+      "bothCoverage": 0.991,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_17",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.809,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -829,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.385,
+      "bothCoverage": 0.865,
+      "robustness": 0.59,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_18",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.668,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 2463,
+      "practiceDeltaMs": 604,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.445,
+      "bothCoverage": 0.526,
+      "robustness": 0.34,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_19",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 38,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.383,
+      "bothCoverage": 0.401,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_2",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.439,
+      "bothCoverage": 0.933,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_20",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -672,
+      "practiceDeltaMs": 768,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.284,
+      "bothCoverage": 0.796,
+      "robustness": 0.34,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_21",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -1069,
+      "practiceDeltaMs": 261,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.67,
+      "bothCoverage": 0.867,
+      "robustness": 0.201,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_22",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 1305,
+      "practiceDeltaMs": -136,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.418,
+      "bothCoverage": 0.896,
+      "robustness": 0.299,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_23",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 26,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.488,
+      "bothCoverage": 0.891,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_3",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.568,
+      "fieVerdict": "left",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": -804,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.332,
+      "bothCoverage": 0.914,
+      "robustness": 1,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__右_7",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.693,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 595,
+      "practiceDeltaMs": 127,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.444,
+      "bothCoverage": 0.751,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_8",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.844,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 31,
+      "practiceDeltaMs": 250,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.419,
+      "bothCoverage": 0.563,
+      "robustness": 0.054,
+      "decisiveAssumptions": [
+        "simultaneity_window",
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右_9",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.7,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 166,
+      "practiceDeltaMs": -35,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.809,
+      "bothCoverage": 0.819,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__右s",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.838,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -760,
+      "practiceDeltaMs": -164,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.414,
+      "bothCoverage": 0.821,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -294,
+      "practiceDeltaMs": 98,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.545,
+      "bothCoverage": 0.82,
+      "robustness": 0.257,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_12",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.758,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -1905,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.492,
+      "bothCoverage": 0.934,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左_13",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.713,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 869,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.299,
+      "bothCoverage": 0.856,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左_14",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.616,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -738,
+      "practiceDeltaMs": -440,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [],
+      "validCoverage": 0.457,
+      "bothCoverage": 0.865,
+      "robustness": 0.674,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_15",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 1019,
+      "practiceDeltaMs": -905,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.216,
+      "bothCoverage": 0.814,
+      "robustness": 0.382,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_16",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.762,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 906,
+      "practiceDeltaMs": 84,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.465,
+      "bothCoverage": 0.718,
+      "robustness": 0.132,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左_17",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.794,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -1487,
+      "practiceDeltaMs": -1668,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.342,
+      "bothCoverage": 0.652,
+      "robustness": 0.09,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左_3",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "right",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 67,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.443,
+      "bothCoverage": 0.864,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_4",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -294,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.196,
+      "bothCoverage": 0.627,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_5",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.789,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -1462,
+      "practiceDeltaMs": -1617,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.3,
+      "bothCoverage": 0.615,
+      "robustness": 0.174,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_7",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.881,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 583,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.714,
+      "bothCoverage": 0.89,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左_8",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.867,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -166,
+      "practiceDeltaMs": -80,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.28,
+      "bothCoverage": 0.698,
+      "robustness": 0.201,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左_9",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.791,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 436,
+      "practiceDeltaMs": 1009,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.348,
+      "bothCoverage": 0.68,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左s",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "right",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 1047,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.29,
+      "bothCoverage": 0.721,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "preparation_vs_attack__左s_2",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -847,
+      "practiceDeltaMs": 118,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.296,
+      "bothCoverage": 0.796,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左s_3",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 505,
+      "practiceDeltaMs": -142,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.161,
+      "bothCoverage": 0.9,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "preparation_vs_attack__左s_4",
+      "scenario": "preparation_vs_attack",
+      "scenarioZh": "准备进攻·抬手",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 34,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.687,
+      "bothCoverage": 0.916,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "remise__右_2",
+      "scenario": "remise",
+      "scenarioZh": "重复进攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.804,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -1395,
+      "practiceDeltaMs": 34,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.159,
+      "bothCoverage": 0.31,
+      "robustness": 0.34,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "remise__左",
+      "scenario": "remise",
+      "scenarioZh": "重复进攻",
+      "expertVerdict": "left",
+      "verdict": "simultaneous",
+      "confidence": 0.775,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 0,
+      "practiceDeltaMs": 400,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.342,
+      "bothCoverage": 0.502,
+      "robustness": 0.132,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "remise__左_3",
+      "scenario": "remise",
+      "scenarioZh": "重复进攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -1084,
+      "practiceDeltaMs": 264,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.424,
+      "bothCoverage": 0.589,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__右",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.74,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 834,
+      "practiceDeltaMs": 133,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.382,
+      "bothCoverage": 0.953,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__右_2",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.758,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -1277,
+      "practiceDeltaMs": -308,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.535,
+      "bothCoverage": 0.816,
+      "robustness": 0.424,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "retreat_counter__右_3",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 1177,
+      "practiceDeltaMs": -143,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.569,
+      "bothCoverage": 0.935,
+      "robustness": 0.549,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "retreat_counter__右_4",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.838,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -303,
+      "practiceDeltaMs": -214,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.593,
+      "bothCoverage": 0.81,
+      "robustness": 0.215,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "retreat_counter__右_5",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -2440,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.418,
+      "bothCoverage": 0.929,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "retreat_counter__右_6",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.91,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -783,
+      "practiceDeltaMs": -237,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.503,
+      "bothCoverage": 0.766,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__右s（不成立）",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -484,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.188,
+      "bothCoverage": 0.643,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "retreat_counter__右（不成立）",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.38,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -49,
+      "practiceDeltaMs": -171,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.margin.fie_text",
+          "severity": "medium",
+          "title": "条文口径的时差贴近可分辨阈值"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.231,
+      "bothCoverage": 0.647,
+      "robustness": 0.029,
+      "decisiveAssumptions": [
+        "simultaneity_window",
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__左",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "left",
+      "verdict": "simultaneous",
+      "confidence": 0.776,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 0,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.291,
+      "bothCoverage": 0.348,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__左_2",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.854,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -998,
+      "practiceDeltaMs": 21,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.382,
+      "bothCoverage": 0.869,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__左s",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 803,
+      "practiceDeltaMs": -50,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.margin.practice_footfirst",
+          "severity": "medium",
+          "title": "实践口径的时差贴近可分辨阈值"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.583,
+      "bothCoverage": 0.987,
+      "robustness": 0.09,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "retreat_counter__左不成立）",
+      "scenario": "retreat_counter",
+      "scenarioZh": "后退转换进攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.587,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -335,
+      "practiceDeltaMs": -138,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.583,
+      "bothCoverage": 0.986,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240813_225935_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "right",
+      "confidence": 0.667,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 369,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.595,
+      "bothCoverage": 0.662,
+      "robustness": 0.09,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240815_132509_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "right",
+      "confidence": 0.705,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 1153,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.325,
+      "bothCoverage": 0.654,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240815_133611_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -114,
+      "practiceDeltaMs": 68,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.34,
+      "bothCoverage": 0.593,
+      "robustness": 0.132,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240817_201114_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "left",
+      "confidence": 0.832,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -218,
+      "practiceDeltaMs": -165,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.465,
+      "bothCoverage": 1,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240830_213522_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.381,
+      "bothCoverage": 0.865,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous__SVID_20240831_121523_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 770,
+      "practiceDeltaMs": -769,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.359,
+      "bothCoverage": 0.972,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240909_134457_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "left",
+      "confidence": 0.555,
+      "fieVerdict": "left",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": -117,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        }
+      ],
+      "validCoverage": 0.328,
+      "bothCoverage": 0.561,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__SVID_20240911_104202_1",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 1062,
+      "practiceDeltaMs": -105,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.468,
+      "bothCoverage": 0.875,
+      "robustness": 0.132,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous__fc10187eb71ad8c83d882873a1db20df",
+      "scenario": "simultaneous",
+      "scenarioZh": "同时",
+      "expertVerdict": "simultaneous",
+      "verdict": "right",
+      "confidence": 0.696,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 1066,
+      "practiceDeltaMs": 34,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.413,
+      "bothCoverage": 0.819,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -83,
+      "practiceDeltaMs": 136,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.613,
+      "bothCoverage": 0.947,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_10",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 66,
+      "practiceDeltaMs": -68,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.408,
+      "bothCoverage": 0.892,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "simultaneity_window",
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_11",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.677,
+      "fieVerdict": "left",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": -596,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.551,
+      "bothCoverage": 1,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_12",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -945,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.339,
+      "bothCoverage": 0.712,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_13",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 213,
+      "practiceDeltaMs": -819,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        }
+      ],
+      "validCoverage": 0.233,
+      "bothCoverage": 0.612,
+      "robustness": 0.549,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_14",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.803,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 409,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.317,
+      "bothCoverage": 0.949,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_15",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.672,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 0,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.553,
+      "bothCoverage": 0.716,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_16",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "insufficient",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": null,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [],
+      "validCoverage": 0.329,
+      "bothCoverage": 0.787,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_17",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.817,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 717,
+      "practiceDeltaMs": 78,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.118,
+      "bothCoverage": 0.657,
+      "robustness": 0.299,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_18",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.746,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 1728,
+      "practiceDeltaMs": 515,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.493,
+      "bothCoverage": 0.703,
+      "robustness": 0.257,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_19",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.83,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -702,
+      "practiceDeltaMs": -902,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.662,
+      "bothCoverage": 0.971,
+      "robustness": 0.16,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_2",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -273,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.265,
+      "bothCoverage": 0.718,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_3",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.694,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 638,
+      "practiceDeltaMs": 0,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.351,
+      "bothCoverage": 0.953,
+      "robustness": 0.118,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_4",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -1336,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        }
+      ],
+      "validCoverage": 0.251,
+      "bothCoverage": 0.785,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右_5",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -551,
+      "practiceDeltaMs": 1137,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.51,
+      "bothCoverage": 0.824,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_6",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "simultaneous",
+      "confidence": 0.621,
+      "fieVerdict": "simultaneous",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 28,
+      "practiceDeltaMs": -906,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.164,
+      "bothCoverage": 0.811,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "simultaneity_window",
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_7",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -469,
+      "practiceDeltaMs": 186,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.144,
+      "bothCoverage": 0.783,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_8",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.525,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 85,
+      "practiceDeltaMs": 412,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [],
+      "validCoverage": 0.087,
+      "bothCoverage": 0.731,
+      "robustness": 0.09,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右_9",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.634,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 102,
+      "practiceDeltaMs": 139,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.328,
+      "bothCoverage": 0.963,
+      "robustness": 0.174,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右s",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.713,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 101,
+      "practiceDeltaMs": 134,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.295,
+      "bothCoverage": 1,
+      "robustness": 0.201,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右s_2",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.59,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 1114,
+      "practiceDeltaMs": 869,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.527,
+      "bothCoverage": 1,
+      "robustness": 0.035,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__右s_3",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.507,
+      "fieVerdict": "right",
+      "practiceVerdict": "simultaneous",
+      "fieDeltaMs": 768,
+      "practiceDeltaMs": -24,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.578,
+      "bothCoverage": 0.806,
+      "robustness": 0.215,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右s_4",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 408,
+      "practiceDeltaMs": -865,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        }
+      ],
+      "validCoverage": 0.68,
+      "bothCoverage": 0.958,
+      "robustness": 0.299,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__右s_5",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "right",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -276,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.249,
+      "bothCoverage": 0.715,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__左",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "left",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": -185,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.527,
+      "bothCoverage": 0.844,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__左_10",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -217,
+      "practiceDeltaMs": 335,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.143,
+      "bothCoverage": 0.833,
+      "robustness": 0.382,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__左_3",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "right",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 167,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        }
+      ],
+      "validCoverage": 0.218,
+      "bothCoverage": 0.799,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__左_4",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -100,
+      "practiceDeltaMs": 263,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.31,
+      "bothCoverage": 0.815,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__左_5",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.606,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 877,
+      "practiceDeltaMs": 248,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.148,
+      "bothCoverage": 1,
+      "robustness": 0.049,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__左_8",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -451,
+      "practiceDeltaMs": 130,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.296,
+      "bothCoverage": 0.573,
+      "robustness": 0.076,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "simultaneous_start__左_9",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "insufficient",
+      "confidence": 0,
+      "fieVerdict": "insufficient",
+      "practiceVerdict": "right",
+      "fieDeltaMs": null,
+      "practiceDeltaMs": 64,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine.partial",
+          "severity": "medium",
+          "title": "两个判据口径的可分辨程度不一致"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.244,
+      "bothCoverage": 0.808,
+      "robustness": null,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "simultaneous_start__左s",
+      "scenario": "simultaneous_start",
+      "scenarioZh": "对攻·原地抢攻",
+      "expertVerdict": "left",
+      "verdict": "left",
+      "confidence": 0.45,
+      "fieVerdict": "left",
+      "practiceVerdict": "right",
+      "fieDeltaMs": -149,
+      "practiceDeltaMs": 252,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.359,
+      "bothCoverage": 0.829,
+      "robustness": 0.16,
+      "decisiveAssumptions": []
+    },
+    {
+      "id": "withdraw_arm__右",
+      "scenario": "withdraw_arm",
+      "scenarioZh": "转换·收手",
+      "expertVerdict": "right",
+      "verdict": "left",
+      "confidence": 0.523,
+      "fieVerdict": "left",
+      "practiceVerdict": "left",
+      "fieDeltaMs": -1267,
+      "practiceDeltaMs": -67,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.309,
+      "bothCoverage": 0.641,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "withdraw_arm__右_3",
+      "scenario": "withdraw_arm",
+      "scenarioZh": "转换·收手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 53,
+      "practiceDeltaMs": -122,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.margin.fie_text",
+          "severity": "medium",
+          "title": "条文口径的时差贴近可分辨阈值"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.27,
+      "bothCoverage": 0.578,
+      "robustness": 0.071,
+      "decisiveAssumptions": [
+        "simultaneity_window"
+      ]
+    },
+    {
+      "id": "withdraw_arm__右s",
+      "scenario": "withdraw_arm",
+      "scenarioZh": "转换·收手",
+      "expertVerdict": "right",
+      "verdict": "right",
+      "confidence": 0.45,
+      "fieVerdict": "right",
+      "practiceVerdict": "left",
+      "fieDeltaMs": 801,
+      "practiceDeltaMs": -116,
+      "doctrinesDisagree": true,
+      "agreesWithExpert": true,
+      "conflicts": [
+        {
+          "id": "conflict.doctrine",
+          "severity": "high",
+          "title": "两个判据口径给出相反结论"
+        },
+        {
+          "id": "conflict.completion",
+          "severity": "medium",
+          "title": "取得优先权的一方疑似未完成攻击"
+        },
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.58,
+      "bothCoverage": 1,
+      "robustness": 0.007,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    },
+    {
+      "id": "withdraw_arm__左",
+      "scenario": "withdraw_arm",
+      "scenarioZh": "转换·收手",
+      "expertVerdict": "left",
+      "verdict": "right",
+      "confidence": 0.786,
+      "fieVerdict": "right",
+      "practiceVerdict": "right",
+      "fieDeltaMs": 172,
+      "practiceDeltaMs": 790,
+      "doctrinesDisagree": false,
+      "agreesWithExpert": false,
+      "conflicts": [
+        {
+          "id": "conflict.withdraw",
+          "severity": "medium",
+          "title": "取得优先权的一方存在收手动作"
+        }
+      ],
+      "validCoverage": 0.293,
+      "bothCoverage": 0.765,
+      "robustness": 0.09,
+      "decisiveAssumptions": [
+        "arm_ext_rate"
+      ]
+    }
+  ]
+}

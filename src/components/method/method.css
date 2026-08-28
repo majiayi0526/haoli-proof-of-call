@@ -1,0 +1,255 @@
+.mth {
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--s-6) var(--s-5) var(--s-8);
+}
+
+.mth__head {
+  max-width: 1100px;
+  margin: 0 auto var(--s-7);
+}
+
+.mth__kicker {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.mth__head h1 {
+  margin: var(--s-3) 0 var(--s-4);
+  font-size: var(--t-h1);
+  line-height: 1.14;
+  letter-spacing: -0.03em;
+}
+
+.mth__lede {
+  max-width: 66ch;
+  color: var(--text-2);
+  font-size: var(--t-lead);
+  line-height: 1.75;
+}
+
+.mth__sec {
+  max-width: 1100px;
+  margin: 0 auto var(--s-7);
+  padding-top: var(--s-5);
+  border-top: 1px solid var(--line-soft);
+}
+
+.mth__sec h2 {
+  margin-bottom: var(--s-3);
+  font-size: var(--t-h3);
+  letter-spacing: -0.01em;
+}
+
+.mth__note {
+  max-width: 72ch;
+  margin-bottom: var(--s-4);
+  color: var(--text-3);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}
+
+.mth__note a {
+  margin: 0 4px;
+  color: var(--observed);
+  text-decoration: none;
+  border-bottom: 1px solid currentColor;
+}
+
+/* ── 口径 ── */
+.mth__doctrines {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: var(--s-4);
+}
+
+.doc {
+  padding: var(--s-4);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+}
+
+.doc h3 {
+  margin-bottom: var(--s-2);
+  font-size: var(--t-body);
+}
+
+.doc__crit {
+  padding: var(--s-2) var(--s-3);
+  margin-bottom: var(--s-3);
+  border-radius: var(--r-tight);
+  background: var(--bg-deep);
+  color: var(--text-3);
+  font-size: var(--t-small);
+}
+
+.doc__crit strong {
+  color: var(--observed);
+}
+
+.doc__basis {
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.7;
+}
+
+.doc__prov {
+  margin-top: var(--s-3);
+  padding-top: var(--s-3);
+  border-top: 1px dashed var(--line-soft);
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.65;
+}
+
+.doc__prov span {
+  margin-right: 6px;
+  color: var(--ruled);
+  font-weight: 650;
+}
+
+.doc__refs {
+  margin-top: var(--s-2);
+  color: var(--text-4);
+  font-size: 0.625rem;
+}
+
+/* ── 假设表 ── */
+.mth__table {
+  width: 100%;
+  min-width: 640px;
+  border-collapse: collapse;
+}
+
+.mth__table th {
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--line);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  text-align: left;
+}
+
+.mth__table td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--line-soft);
+  vertical-align: top;
+}
+
+.mth__aname {
+  width: 140px;
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+}
+
+.mth__aval {
+  width: 90px;
+  color: var(--warn);
+  font-size: var(--t-small);
+  font-weight: 700;
+  white-space: nowrap;
+}
+
+.mth__awhy {
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.7;
+}
+
+/* ── 规则 ── */
+.mth__rules {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.mth__rules li {
+  display: flex;
+  gap: var(--s-3);
+  padding: var(--s-3);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+}
+
+.mth__rulecode {
+  flex-shrink: 0;
+  align-self: flex-start;
+  display: inline-flex;
+  align-items: baseline;
+  gap: 5px;
+  padding: 2px 7px;
+  border-radius: var(--r-sharp);
+  background: var(--ruled);
+  color: var(--bg-deep);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  text-decoration: none;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.mth__rulecode:hover {
+  opacity: 0.82;
+}
+
+.mth__rulecode em {
+  font-style: normal;
+  font-size: 0.5625rem;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.mth__rules strong {
+  color: var(--text);
+  font-size: var(--t-small);
+}
+
+.mth__zh {
+  margin-top: 3px;
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.65;
+}
+
+.mth__op {
+  margin-top: var(--s-2);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.65;
+}
+
+/* ── 边界 ── */
+.mth__sec--limits h2 {
+  color: var(--warn);
+}
+
+.mth__limits {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(290px, 1fr));
+  gap: var(--s-4);
+}
+
+.mth__limits li {
+  padding: var(--s-4);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  border-top: 3px solid var(--warn-dim);
+}
+
+.mth__limits h3 {
+  margin-bottom: var(--s-2);
+  color: var(--warn);
+  font-size: var(--t-body);
+}
+
+.mth__limits p {
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}

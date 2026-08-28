@@ -1,0 +1,42 @@
+node_modules
+dist
+.venv
+__pycache__/
+*.pyc
+.DS_Store
+
+# 原始素材不进仓库：赛事转播片段版权归原转播方所有，仅本地用于研究。
+# 骨骼数据（tracks）与缩略图为衍生数据，随仓库分发以保证结论可复现。
+public/clips/
+data/tracks/
+data/*.log
+data/run_batch.sh
+
+# 模型与运行时由 npm run assets 下载，不占仓库体积
+public/models/
+public/wasm/
+
+# 素材清单含本机绝对路径
+tools/dataset_manifest.json
+*.pt
+
+# Vercel 本地链接信息（含项目与组织 ID）
+.vercel
+.vercel-cache
+
+# 路演稿与交接提示词只在本地：前者是老板要说出口的话，
+# 后者含完整项目上下文，都不必随公开仓库分发。
+docs/演示与路演.md
+docs/交接提示词.md
+# 已决定不参加秒哒命题，方案文档只留在本地
+docs/秒哒提示词.md
+# 演示逐字稿是老板要说出口的话，不必随仓库分发
+docs/演示脚本.md
+# 文案改写的内部工作记录，不随仓库分发
+docs/文案改写清单.md
+
+# 以下只在本地使用，不随仓库分发
+.claude/
+tools/extract_pose.py
+tools/deploy-cn.sh
+tools/screenshots.mjs

@@ -1,0 +1,278 @@
+.tl {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.tl__scale {
+  position: relative;
+  height: 14px;
+}
+
+.tl__tick {
+  position: absolute;
+  transform: translateX(-50%);
+  color: var(--text-4);
+  font-size: 0.625rem;
+  white-space: nowrap;
+}
+
+.tl__tick:first-child {
+  transform: none;
+}
+.tl__tick:last-child {
+  transform: translateX(-100%);
+}
+
+/* ── 轨道 ── */
+.tl__track {
+  position: relative;
+  height: 116px;
+  padding: var(--s-2) 0;
+  border-radius: var(--r-card);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+  cursor: crosshair;
+  overflow: hidden;
+}
+
+.tl__phrase {
+  position: absolute;
+  inset-block: 0;
+  background: oklch(30% 0.02 255 / 0.55);
+  border-inline: 1px solid var(--line);
+}
+
+.tl__phraselabel {
+  position: absolute;
+  top: 3px;
+  left: 6px;
+  color: var(--text-4);
+  font-size: 0.625rem;
+  letter-spacing: 0.05em;
+  pointer-events: none;
+}
+
+/* ── 时差带 ── */
+.tl__delta {
+  position: absolute;
+  top: 46px;
+  height: 22px;
+  border-radius: var(--r-sharp);
+  background: linear-gradient(
+    to right,
+    var(--left-glow),
+    oklch(50% 0.02 255 / 0.25),
+    var(--right-glow)
+  );
+  border: 1px solid var(--line);
+  pointer-events: none;
+}
+
+/* 落在可分辨阈值内的时差：斜纹，表示「这段差距不构成证据」 */
+.tl__delta--undecidable {
+  background: repeating-linear-gradient(
+    45deg,
+    oklch(45% 0.015 255 / 0.5) 0 4px,
+    transparent 4px 8px
+  );
+  border-style: dashed;
+}
+
+.tl__deltalabel {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  padding: 0 5px;
+  border-radius: var(--r-sharp);
+  background: var(--bg-deep);
+  color: var(--text-2);
+  font-size: 0.625rem;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* ── 泳道 ── */
+.tl__lane {
+  position: absolute;
+  left: 0;
+  right: 0;
+  height: 30px;
+}
+
+.tl__lane--left {
+  top: 14px;
+}
+.tl__lane--right {
+  bottom: 14px;
+}
+
+.tl__lane::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 1px;
+  background: var(--line-soft);
+}
+
+.tl__lanename {
+  position: absolute;
+  left: 4px;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 1;
+  width: 15px;
+  height: 15px;
+  display: grid;
+  place-items: center;
+  border-radius: var(--r-sharp);
+  font-size: 0.625rem;
+  font-weight: 700;
+  pointer-events: none;
+}
+
+.tl__lane--left .tl__lanename {
+  background: var(--left);
+  color: var(--bg-deep);
+}
+.tl__lane--right .tl__lanename {
+  background: var(--right);
+  color: var(--bg-deep);
+}
+
+/* ── 事件标记 ── */
+.tl__ev {
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2px;
+  padding: 2px;
+  transition: transform var(--dur-fast) var(--ease);
+}
+
+.tl__ev:hover {
+  transform: translate(-50%, -50%) scale(1.14);
+  z-index: 3;
+}
+
+.tl__evdot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: 1.5px solid var(--bg-deep);
+}
+
+.tl__ev--left .tl__evdot {
+  background: var(--left);
+}
+.tl__ev--right .tl__evdot {
+  background: var(--right);
+}
+
+.tl__ev.is-decisive .tl__evdot {
+  width: 13px;
+  height: 13px;
+  border-radius: 3px;
+  transform: rotate(45deg);
+}
+
+.tl__ev.is-estimated .tl__evdot {
+  background: transparent;
+  border-color: var(--estimated);
+  border-style: dashed;
+  border-width: 1.5px;
+}
+
+.tl__ev.is-active .tl__evdot {
+  box-shadow: 0 0 0 3px oklch(95% 0.004 255 / 0.35);
+}
+
+.tl__evlabel {
+  color: var(--text-3);
+  font-size: 0.5625rem;
+  white-space: nowrap;
+  opacity: 0;
+  transition: opacity var(--dur-fast) var(--ease);
+}
+
+.tl__ev:hover .tl__evlabel,
+.tl__ev.is-decisive .tl__evlabel,
+.tl__ev.is-active .tl__evlabel {
+  opacity: 1;
+}
+
+.tl__ev.is-active .tl__evlabel {
+  color: var(--text);
+}
+
+/* ── 游标 ── */
+.tl__cursor {
+  position: absolute;
+  inset-block: 0;
+  width: 1px;
+  background: var(--neutral);
+  pointer-events: none;
+  z-index: 4;
+}
+
+.tl__cursorhead {
+  position: absolute;
+  top: 2px;
+  left: 3px;
+  padding: 0 4px;
+  border-radius: var(--r-sharp);
+  background: var(--neutral);
+  color: var(--bg-deep);
+  font-size: 0.5625rem;
+  font-weight: 700;
+}
+
+/* ── 图例 ── */
+.tl__legend {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  color: var(--text-4);
+  font-size: 0.625rem;
+  line-height: 1.5;
+}
+
+.tl__key {
+  display: inline-block;
+  width: 9px;
+  height: 9px;
+  flex-shrink: 0;
+}
+
+.tl__key--decisive {
+  background: var(--text-3);
+  border-radius: 2px;
+  transform: rotate(45deg);
+}
+
+.tl__key--estimated {
+  border: 1.5px dashed var(--estimated);
+  border-radius: 50%;
+}
+
+.tl__key--band {
+  width: 18px;
+  height: 8px;
+  background: repeating-linear-gradient(
+    45deg,
+    oklch(45% 0.015 255 / 0.6) 0 3px,
+    transparent 3px 6px
+  );
+  border: 1px dashed var(--line);
+}
+
+.tl__legend > :not(:first-child) {
+  margin-left: 2px;
+}

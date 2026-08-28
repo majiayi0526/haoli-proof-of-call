@@ -1,0 +1,494 @@
+/**
+ * 入场页。
+ *
+ * 满屏深色，像裁判监视器开机。两个阶段共用同一个品牌块：
+ * 揭示阶段它居中占满，进入选择阶段后缩到顶部让位给身份卡——
+ * 用 transform 和 font-size 的过渡完成，不做两套 DOM，
+ * 免得中间闪一下。
+ */
+
+.gate {
+  position: fixed;
+  inset: 0;
+  z-index: 100;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--bg-deep);
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding: clamp(1.25rem, 4vh, 3rem) clamp(1rem, 4vw, 3rem);
+}
+
+/* 揭示阶段：品牌块垂直居中占满 */
+.gate--brand {
+  justify-content: center;
+}
+
+/* 选择阶段：品牌块退到顶部 */
+.gate--choose {
+  justify-content: flex-start;
+}
+
+/* ---------- 品牌块 ---------- */
+
+.gate__brand {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.gate__blades {
+  color: var(--text-3);
+  opacity: 0;
+  animation: gate-in 520ms var(--ease-out-expo, cubic-bezier(0.16, 1, 0.3, 1)) forwards;
+}
+
+.gate__name {
+  margin: 0.5rem 0 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.35rem;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--text);
+  line-height: 1;
+  /* 揭示阶段大、选择阶段小，用 font-size 过渡会触发重排，
+     但这是入场时一次性的，且元素独立成层，代价可以接受；
+     真正逐帧的动画（骨骼、证据条）仍然只走 transform / opacity。 */
+  font-size: clamp(2.75rem, 11vw, 5.5rem);
+  transition: font-size 460ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gate--choose .gate__name {
+  font-size: clamp(1.65rem, 5vw, 2.25rem);
+}
+
+.gate__en {
+  font-family: var(--font-mono, ui-monospace, monospace);
+  /* 跟着主标题缩，但给个下限：选择阶段主标题只有 2.25rem，
+     按 0.24em 算出来是 8.6px，配上 --text-4 基本等于看不见 */
+  font-size: max(0.65rem, 0.24em);
+  font-weight: 500;
+  letter-spacing: 0.42em;
+  /* 字距把整行向右推了半格，抵掉才能真正居中 */
+  text-indent: 0.42em;
+  color: var(--text-3);
+}
+
+.gate__name,
+.gate__slogan,
+.gate__piste {
+  opacity: 0;
+  animation: gate-in 620ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.gate__name {
+  animation-delay: 120ms;
+}
+
+.gate__piste {
+  width: min(30rem, 70vw);
+  margin: 1.1rem 0 0.9rem;
+  animation-delay: 300ms;
+}
+
+.gate__slogan {
+  margin: 0;
+  font-size: clamp(0.85rem, 2.6vw, 1rem);
+  color: var(--text-3);
+  letter-spacing: 0.03em;
+  animation-delay: 420ms;
+}
+
+/**
+ * 品牌页的进入按钮。
+ *
+ * 铺满整屏所以点哪儿都能进，同时它是个真 button——键盘可聚焦、
+ * 回车可触发，还自带焦点圈。用全局 keydown 监听虽然也能进，
+ * 但键盘用户看不到任何可聚焦的东西，不知道这一屏还能往下走。
+ */
+.gate__enter {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: flex-end;
+  justify-content: center;
+  padding-bottom: clamp(2.5rem, 12vh, 6rem);
+  background: none;
+  border: 0;
+  cursor: pointer;
+  font: inherit;
+}
+
+.gate__enterHint {
+  padding: 0.5rem 1.1rem;
+  border: 1px solid var(--line-soft);
+  border-radius: 999px;
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-indent: 0.16em;
+  color: var(--text-3);
+  opacity: 0;
+  /* 先让品牌读完，再请人往下走 */
+  animation:
+    gate-in 500ms 900ms ease forwards,
+    gate-breathe 2.8s 1400ms ease-in-out infinite;
+  transition:
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.gate__enter:hover .gate__enterHint {
+  color: var(--text);
+  border-color: var(--text-4);
+}
+
+.gate__enter:focus-visible .gate__enterHint {
+  outline: 2px solid var(--text-3);
+  outline-offset: 3px;
+  color: var(--text);
+}
+
+@keyframes gate-breathe {
+  0%,
+  100% {
+    opacity: 0.55;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes gate-in {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* ---------- 身份选择 ---------- */
+
+.gate__choose {
+  width: 100%;
+  max-width: 72rem;
+  margin-top: clamp(1.5rem, 5vh, 3rem);
+  padding-bottom: 2rem;
+  opacity: 0;
+  animation: gate-in 520ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.gate__q {
+  margin: 0;
+  text-align: center;
+  font-size: clamp(1.15rem, 3.6vw, 1.6rem);
+  font-weight: 600;
+  color: var(--text);
+  letter-spacing: 0.02em;
+}
+
+.gate__roles {
+  list-style: none;
+  margin: clamp(1.5rem, 4vh, 2.5rem) 0 0;
+  padding: 0;
+  display: grid;
+  gap: clamp(0.75rem, 2vw, 1.1rem);
+  /* 放得下就三列，放不下自己掉成一列——不设死列数，
+     窄屏和浏览器缩放下都不会挤爆 */
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 17rem), 1fr));
+}
+
+.gate__role {
+  display: flex;
+  opacity: 0;
+  animation: gate-in 480ms cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  animation-delay: calc(120ms + var(--i) * 90ms);
+}
+
+.gate__role > button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.75rem;
+  padding: clamp(1rem, 2.6vw, 1.4rem);
+  text-align: left;
+  cursor: pointer;
+  border-radius: var(--r-panel, 10px);
+  border: 1px solid var(--line-soft);
+  /* 顶边一道强调色：身份的区分在这里，不靠整块染色 */
+  border-top: 2px solid var(--accent);
+  background: var(--surface);
+  color: inherit;
+  font: inherit;
+  transition:
+    transform 220ms cubic-bezier(0.16, 1, 0.3, 1),
+    border-color 220ms ease,
+    background-color 220ms ease;
+}
+
+.gate__role > button:hover:not(:disabled),
+.gate__role > button:focus-visible {
+  transform: translateY(-3px);
+  background: var(--surface-2);
+  border-color: var(--line);
+  border-top-color: var(--accent);
+}
+
+.gate__role > button:disabled {
+  opacity: 0.4;
+  cursor: default;
+}
+
+.gate__roleHead {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.gate__roleName {
+  /* 名字是这张卡唯一的标题，居中放大——副标题去掉之后，
+     它得自己撑住整个卡头 */
+  font-size: 1.45rem;
+  font-weight: 650;
+  color: var(--accent);
+  letter-spacing: 0.06em;
+  text-indent: 0.06em;
+  text-align: center;
+}
+
+.gate__can {
+  list-style: none;
+  margin: 0.25rem 0 0.35rem;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.55rem;
+  flex: 1;
+}
+
+.gate__can li {
+  position: relative;
+  padding-left: 0.9rem;
+  font-size: 0.82rem;
+  line-height: 1.65;
+  color: var(--text-2);
+}
+
+.gate__can li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.62em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--accent);
+}
+
+.gate__go {
+  margin-top: 0.15rem;
+  /* 触摸命中区不小于 38px */
+  min-height: 38px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  border: 1px solid var(--line);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  color: var(--text-2);
+  transition:
+    color 200ms ease,
+    border-color 200ms ease;
+}
+
+.gate__role > button:hover:not(:disabled) .gate__go {
+  color: var(--accent);
+  border-color: var(--accent);
+}
+
+/* ---------- 减少动效 ---------- */
+
+.gate--still * {
+  animation: none !important;
+  transition: none !important;
+  opacity: 1 !important;
+  transform: none !important;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .gate *,
+  .gate *::before {
+    animation-duration: 1ms !important;
+    animation-delay: 0ms !important;
+    transition-duration: 1ms !important;
+  }
+}
+
+/* ---------- 窄屏 ---------- */
+
+@media (max-width: 460px) {
+  .gate {
+    padding-left: 0.9rem;
+    padding-right: 0.9rem;
+  }
+  .gate__en {
+    letter-spacing: 0.3em;
+    text-indent: 0.3em;
+  }
+}
+
+/* 横屏手机：竖向空间很紧，品牌块再收一点 */
+@media (max-height: 520px) and (orientation: landscape) {
+  .gate--choose .gate__name {
+    font-size: 1.4rem;
+  }
+  .gate--choose .gate__piste,
+  .gate--choose .gate__slogan {
+    display: none;
+  }
+  .gate__choose {
+    margin-top: 1rem;
+  }
+}
+
+/* ---------- 身份条 ---------- */
+
+.rstrip {
+  flex-shrink: 0;
+  border-bottom: 1px solid var(--line-soft);
+  background: var(--surface);
+  padding: 0.4rem clamp(0.75rem, 2vw, 1.25rem);
+}
+
+.rstrip__row {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+
+.rstrip__glyph {
+  color: var(--accent);
+  flex-shrink: 0;
+}
+
+.rstrip__name {
+  font-size: 0.8rem;
+  font-weight: 650;
+  color: var(--accent);
+  letter-spacing: 0.02em;
+}
+
+.rstrip__stand {
+  font-size: 0.72rem;
+  color: var(--text-4);
+}
+
+.rstrip__spacer {
+  flex: 1;
+  min-width: 0;
+}
+
+.rstrip__switch {
+  /* 触摸命中区不小于 38px */
+  min-height: 38px;
+  padding: 0 0.7rem;
+  border-radius: 6px;
+  border: 1px solid transparent;
+  background: none;
+  font: inherit;
+  font-size: 0.72rem;
+  color: var(--text-3);
+  cursor: pointer;
+  transition:
+    color 180ms ease,
+    border-color 180ms ease;
+}
+
+.rstrip__switch:hover,
+.rstrip__switch:focus-visible {
+  color: var(--text);
+  border-color: var(--line);
+}
+
+@media (max-width: 560px) {
+  .rstrip {
+    padding: 0.15rem 0.6rem;
+  }
+  .rstrip__stand {
+    display: none;
+  }
+  .rstrip__row {
+    gap: 0.25rem;
+    flex-wrap: nowrap;
+  }
+  .rstrip__switch {
+    min-height: 34px;
+    padding: 0 0.5rem;
+    white-space: nowrap;
+  }
+  .rstrip__name {
+    font-size: 0.75rem;
+  }
+}
+
+/* ---------- 身份图标 ---------- */
+
+/**
+ * 图标底下垫一层强调色辉光。
+ *
+ * 直接把图标染成强调色会和标题抢，压暗又显脏。垫一层极淡的径向渐变，
+ * 图标本身走中性色，鼠标移上去辉光和图标一起提亮——层次来自明度差，
+ * 不是来自更多颜色。
+ */
+.gate__roleGlyph {
+  position: relative;
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 58px;
+  height: 58px;
+  color: var(--text-3);
+  transition:
+    color 260ms ease,
+    transform 260ms cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.gate__roleGlyph::before {
+  content: '';
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: radial-gradient(circle at 50% 45%, var(--accent) 0%, transparent 68%);
+  opacity: 0.13;
+  transition: opacity 260ms ease;
+}
+
+.gate__role > button:hover:not(:disabled) .gate__roleGlyph,
+.gate__role > button:focus-visible .gate__roleGlyph {
+  color: var(--text);
+  transform: translateY(-2px);
+}
+
+.gate__role > button:hover:not(:disabled) .gate__roleGlyph::before,
+.gate__role > button:focus-visible .gate__roleGlyph::before {
+  opacity: 0.26;
+}
+
+@media (max-width: 360px) {
+  .gate__roleGlyph {
+    width: 46px;
+    height: 46px;
+  }
+}

@@ -1,0 +1,443 @@
+/* ═══ 顶栏控件共用 ═══ */
+
+.wsw,
+.sbox,
+.acct {
+  position: relative;
+}
+
+.wsw__pop,
+.sbox__pop,
+.acct__pop {
+  position: absolute;
+  top: calc(100% + 9px);
+  z-index: 40;
+  padding: var(--s-4);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-3);
+  animation: popIn var(--dur) var(--ease);
+}
+
+@keyframes popIn {
+  from {
+    opacity: 0;
+    transform: translateY(-4px);
+  }
+}
+
+/* ── 剑种切换 ── */
+.wsw__group {
+  display: flex;
+  gap: 2px;
+  padding: 3px;
+  border-radius: var(--r-pill);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+}
+
+.wsw__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 11px;
+  border-radius: var(--r-pill);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    background var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.wsw__btn:hover {
+  color: var(--text-2);
+}
+
+.wsw__btn.is-active {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.wsw__btn.is-soon {
+  opacity: 0.62;
+}
+
+.wsw__soon {
+  padding: 0 4px;
+  border-radius: var(--r-sharp);
+  background: var(--surface-3);
+  color: var(--text-4);
+  font-size: 0.5625rem;
+  font-weight: 600;
+}
+
+.wsw__pop {
+  left: 0;
+  width: min(360px, calc(100vw - 32px));
+}
+
+.wsw__pophead {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  margin-bottom: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--text);
+}
+
+.wsw__pophead strong {
+  display: block;
+  font-size: var(--t-body);
+}
+
+.wsw__pophead em {
+  margin-left: 5px;
+  color: var(--text-4);
+  font-family: var(--font-mono);
+  font-size: 0.625rem;
+  font-style: normal;
+  letter-spacing: 0.08em;
+}
+
+.wsw__core {
+  display: block;
+  margin-top: 2px;
+  color: var(--text-4);
+  font-size: var(--t-micro);
+}
+
+.wsw__pop p {
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}
+
+/* ── 裁判器 ── */
+.sbox__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-soft);
+  background: var(--bg-deep);
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  white-space: nowrap;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.sbox__btn:hover {
+  color: var(--text);
+  border-color: var(--text-4);
+}
+
+.sbox__dot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--text-4);
+  flex-shrink: 0;
+}
+
+.sbox__btn--connected .sbox__dot,
+.sbox__btn--simulated .sbox__dot {
+  background: var(--ok);
+  box-shadow: 0 0 8px color-mix(in oklch, var(--ok) 60%, transparent);
+}
+
+.sbox__btn--simulated {
+  border-style: dashed;
+}
+
+.sbox__btn--connecting .sbox__dot {
+  background: var(--warn);
+}
+
+.sbox__pop {
+  right: 0;
+  width: min(430px, calc(100vw - 32px));
+}
+
+.sbox__pop h4 {
+  margin-bottom: var(--s-2);
+  font-size: var(--t-body);
+}
+
+.sbox__lede {
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}
+
+.sbox__split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--s-3);
+  margin: var(--s-4) 0;
+}
+
+.sbox__split div {
+  padding: var(--s-3);
+  border-radius: var(--r-tight);
+  background: var(--bg-deep);
+  border-top: 2px solid var(--line);
+}
+
+.sbox__split div:first-child {
+  border-top-color: var(--observed);
+}
+.sbox__split div:last-child {
+  border-top-color: var(--derived);
+}
+
+.sbox__split dt {
+  color: var(--text);
+  font-size: var(--t-micro);
+  font-weight: 700;
+}
+
+.sbox__split dd {
+  margin: 4px 0 0;
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}
+
+.sbox__gain {
+  padding: var(--s-3);
+  border-radius: var(--r-tight);
+  background: color-mix(in oklch, var(--estimated) 9%, var(--bg-deep));
+  border-left: 2px solid var(--estimated);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  line-height: 1.7;
+}
+
+.sbox__gain strong {
+  color: var(--estimated);
+}
+
+.sbox__acts {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-top: var(--s-3);
+  padding-top: var(--s-3);
+  border-top: 1px solid var(--line-soft);
+}
+
+.sbox__act {
+  align-self: flex-start;
+  padding: 5px 11px;
+  border-radius: var(--r-tight);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+  font-weight: 600;
+}
+
+.sbox__act:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.sbox__note {
+  color: var(--text-4);
+  font-size: 0.625rem;
+  line-height: 1.55;
+}
+
+/* ── 账号 ── */
+.acct__btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 11px;
+  border-radius: var(--r-pill);
+  border: 1px solid var(--line-soft);
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    color var(--dur-fast) var(--ease);
+}
+
+.acct__btn:hover {
+  color: var(--text);
+  border-color: var(--text-4);
+}
+
+.acct__btn.is-in {
+  border-color: var(--confirmed);
+  color: var(--confirmed);
+}
+
+.acct__pop {
+  right: 0;
+  width: min(400px, calc(100vw - 32px));
+}
+
+.acct__pop h4 {
+  margin-bottom: var(--s-2);
+  font-size: var(--t-body);
+}
+
+.acct__lede {
+  margin-bottom: var(--s-3);
+  color: var(--text-2);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}
+
+.acct__roles {
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.acct__roles button {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  width: 100%;
+  padding: var(--s-3);
+  border-radius: var(--r-tight);
+  border: 1px solid var(--line-soft);
+  background: var(--bg-deep);
+  text-align: left;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease);
+}
+
+.acct__roles button:hover {
+  border-color: var(--text-4);
+  background: var(--surface-2);
+}
+
+.acct__roles strong {
+  color: var(--text);
+  font-size: var(--t-small);
+}
+
+.acct__roles span {
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.6;
+}
+
+.acct__who {
+  display: flex;
+  align-items: center;
+  gap: var(--s-3);
+  margin-bottom: var(--s-3);
+  padding-bottom: var(--s-3);
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--confirmed);
+}
+
+.acct__who strong {
+  display: block;
+  color: var(--text);
+  font-size: var(--t-body);
+}
+
+.acct__who span {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+}
+
+.acct__note {
+  margin-top: var(--s-3);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  line-height: 1.7;
+}
+
+.acct__act {
+  margin-top: var(--s-3);
+  padding: 5px 11px;
+  border-radius: var(--r-tight);
+  border: 1px solid var(--line);
+  color: var(--text-2);
+  font-size: var(--t-micro);
+}
+
+.acct__act:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+/* ══ 窄屏适配 ══
+   收缩顺序：先收装饰，再收次要标签，永远保留「当前处于什么状态」。 */
+
+@media (max-width: 1180px) {
+  /* 裁判器状态：标签可以收，但不能只剩一个看不懂的点 */
+  .sbox__label {
+    display: none;
+  }
+
+  .sbox__btn::after {
+    content: '裁判器';
+    color: var(--text-3);
+    font-size: var(--t-micro);
+    font-weight: 600;
+  }
+
+  .acct__name {
+    display: none;
+  }
+}
+
+@media (max-width: 900px) {
+  /* 弹出面板改为贴边全宽，避免在窄屏上被裁切 */
+  .sbox__panel,
+  .acct__panel,
+  .wsw__pop {
+    position: fixed;
+    left: var(--s-3);
+    right: var(--s-3);
+    width: auto;
+    max-width: none;
+    max-height: 72vh;
+    overflow-y: auto;
+  }
+}
+
+/* 账号面板里的能力清单 */
+.acct__can {
+  list-style: none;
+  margin: 0.6rem 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.acct__can li {
+  position: relative;
+  padding-left: 0.8rem;
+  font-size: 0.75rem;
+  line-height: 1.6;
+  color: var(--text-2);
+}
+
+.acct__can li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0.6em;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+  background: var(--text-4);
+}

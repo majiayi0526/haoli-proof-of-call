@@ -1,0 +1,459 @@
+.ins {
+  height: 100%;
+  overflow-y: auto;
+  padding: var(--s-6) var(--s-5) var(--s-8);
+}
+
+.ins__head {
+  max-width: 1400px;
+  margin: 0 auto var(--s-6);
+}
+
+.ins__kicker {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ins__head h1 {
+  margin: var(--s-3) 0 var(--s-4);
+  font-size: var(--t-h1);
+  line-height: 1.12;
+  letter-spacing: -0.03em;
+}
+
+.ins__lede {
+  max-width: 68ch;
+  color: var(--text-2);
+  font-size: var(--t-lead);
+  line-height: 1.75;
+}
+
+.ins__lede strong {
+  color: var(--text);
+}
+
+/* ── 指标卡：刻意不做成整齐的四宫格，主指标更大 ── */
+.ins__cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: var(--s-4);
+  max-width: 1400px;
+  margin: 0 auto var(--s-7);
+}
+
+.icard {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  padding: var(--s-5);
+  border-radius: var(--r-panel);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  text-align: left;
+  transition:
+    transform var(--dur) var(--ease),
+    border-color var(--dur) var(--ease);
+}
+
+button.icard:hover {
+  transform: translateY(-3px);
+  border-color: var(--text-4);
+}
+
+.icard--primary {
+  grid-column: span 2;
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border-color: var(--line);
+}
+
+@media (max-width: 720px) {
+  .icard--primary {
+    grid-column: span 1;
+  }
+}
+
+.icard--static {
+  cursor: default;
+}
+
+.icard__num {
+  color: var(--text);
+  font-size: var(--t-display);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.04em;
+}
+
+.icard--primary .icard__num {
+  color: var(--warn);
+}
+
+.icard__label {
+  margin-top: var(--s-2);
+  color: var(--text);
+  font-size: var(--t-body);
+  font-weight: 650;
+}
+
+.icard__note {
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.65;
+}
+
+.icard__cta {
+  margin-top: var(--s-2);
+  color: var(--observed);
+  font-size: var(--t-micro);
+  font-weight: 600;
+}
+
+/* ── 表格 ── */
+.ins__table {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.ins__table header {
+  margin-bottom: var(--s-4);
+}
+
+.ins__table h2 {
+  font-size: var(--t-h3);
+}
+
+.ins__table header p {
+  margin-top: 4px;
+  max-width: 70ch;
+  color: var(--text-3);
+  font-size: var(--t-small);
+  line-height: 1.6;
+}
+
+.ins__table table {
+  width: 100%;
+  min-width: 720px;
+  border-collapse: collapse;
+}
+
+.ins__table th {
+  padding: var(--s-2) var(--s-3);
+  border-bottom: 1px solid var(--line);
+  color: var(--text-4);
+  font-size: var(--t-micro);
+  font-weight: 600;
+  text-align: right;
+  white-space: nowrap;
+}
+
+.ins__table th:first-child {
+  text-align: left;
+}
+
+.ins__table td {
+  padding: var(--s-3);
+  border-bottom: 1px solid var(--line-soft);
+  color: var(--text-2);
+  font-size: var(--t-small);
+  text-align: right;
+}
+
+.ins__table tbody tr {
+  cursor: pointer;
+  transition: background var(--dur-fast) var(--ease);
+}
+
+.ins__table tbody tr:hover {
+  background: var(--surface);
+}
+
+.ins__scen {
+  color: var(--text);
+  font-weight: 600;
+  text-align: left !important;
+}
+
+.ins__acc {
+  position: relative;
+  display: inline-block;
+  min-width: 52px;
+  padding: 2px 0;
+}
+
+.ins__accbar {
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  height: 2px;
+  border-radius: var(--r-pill);
+}
+
+/* ── 下钻抽屉 ── */
+.drill {
+  position: fixed;
+  inset: 0;
+  z-index: 50;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.drill__scrim {
+  position: absolute;
+  inset: 0;
+  order: -1;
+  background: oklch(8% 0 0 / 0.6);
+  backdrop-filter: blur(3px);
+  border: none;
+}
+
+.drill__panel {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  width: min(620px, 100%);
+  height: 100%;
+  background: var(--bg);
+  border-left: 1px solid var(--line);
+  box-shadow: var(--shadow-3);
+  animation: drillIn var(--dur) var(--ease);
+}
+
+@keyframes drillIn {
+  from {
+    transform: translateX(24px);
+    opacity: 0;
+  }
+}
+
+.drill__panel > header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--s-3);
+  padding: var(--s-5);
+  border-bottom: 1px solid var(--line-soft);
+}
+
+.drill__panel h3 {
+  font-size: var(--t-h3);
+}
+
+.drill__panel > header p {
+  margin-top: 5px;
+  color: var(--text-3);
+  font-size: var(--t-micro);
+  line-height: 1.65;
+}
+
+.drill__panel > header button {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: var(--r-tight);
+  color: var(--text-3);
+}
+
+.drill__panel > header button:hover {
+  background: var(--surface-3);
+  color: var(--text);
+}
+
+.drill__panel ul {
+  flex: 1;
+  min-height: 0;
+  overflow-y: auto;
+  padding: var(--s-3) var(--s-4) var(--s-6);
+  display: flex;
+  flex-direction: column;
+  gap: var(--s-2);
+}
+
+.drill__panel li button {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 100%;
+  padding: var(--s-3);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  border: 1px solid var(--line-soft);
+  text-align: left;
+  transition:
+    border-color var(--dur-fast) var(--ease),
+    background var(--dur-fast) var(--ease);
+}
+
+.drill__panel li button:hover:not(:disabled) {
+  border-color: var(--text-4);
+  background: var(--surface-2);
+}
+
+.drill__panel li button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+
+.drill__scen {
+  color: var(--text-4);
+  font-size: 0.625rem;
+  font-weight: 650;
+  letter-spacing: 0.06em;
+}
+
+.drill__id {
+  color: var(--text);
+  font-size: var(--t-small);
+  font-weight: 600;
+  word-break: break-all;
+}
+
+.drill__verdicts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--s-3);
+  margin-top: 3px;
+}
+
+.drill__v {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-3);
+  font-size: var(--t-micro);
+}
+
+.drill__v em {
+  color: var(--text-4);
+  font-style: normal;
+  font-size: 0.625rem;
+}
+
+.drill__expert {
+  padding: 1px 7px;
+  border-radius: var(--r-pill);
+  font-size: 0.625rem;
+  font-weight: 650;
+}
+
+.drill__expert.is-agree {
+  background: color-mix(in oklch, var(--ok) 18%, transparent);
+  color: var(--ok);
+}
+
+.drill__expert.is-off {
+  background: color-mix(in oklch, var(--warn) 18%, transparent);
+  color: var(--warn);
+}
+
+.drill__go {
+  color: var(--observed);
+  font-size: var(--t-micro);
+  font-weight: 600;
+}
+
+
+/* ── 前置说明：先讲清素材是什么 ── */
+.ins__caveat {
+  max-width: 72ch;
+  margin-top: var(--s-4);
+  padding: var(--s-3) var(--s-4);
+  border-radius: var(--r-card);
+  background: var(--surface);
+  border-left: 3px solid var(--ruled);
+  color: var(--text-3);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}
+
+.ins__caveat strong {
+  color: var(--text-2);
+}
+
+/* ── 主要发现 ── */
+.ins__finding {
+  max-width: 1400px;
+  margin: var(--s-6) auto var(--s-7);
+  padding: var(--s-5);
+  border-radius: var(--r-panel);
+  background: linear-gradient(135deg, var(--surface-2), var(--surface));
+  border: 1px solid var(--line);
+}
+
+.ins__findinglabel {
+  color: var(--warn);
+  font-size: var(--t-micro);
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+.ins__finding h2 {
+  max-width: 30ch;
+  margin: var(--s-3) 0 var(--s-5);
+  font-size: var(--t-h2);
+  line-height: 1.3;
+  letter-spacing: -0.02em;
+}
+
+.ins__versus {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--s-4);
+}
+
+.vs {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  padding: var(--s-4);
+  border-radius: var(--r-card);
+  background: var(--bg-deep);
+  border: 1px solid var(--line-soft);
+}
+
+.vs--win {
+  border-color: var(--ok);
+  background: color-mix(in oklch, var(--ok) 7%, var(--bg-deep));
+}
+
+.vs__name {
+  color: var(--text);
+  font-size: var(--t-body);
+  font-weight: 650;
+}
+
+.vs__crit {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+}
+
+.vs__num {
+  margin-top: var(--s-2);
+  color: var(--text-2);
+  font-size: var(--t-h1);
+  font-weight: 700;
+  line-height: 1;
+  letter-spacing: -0.03em;
+}
+
+.vs--win .vs__num {
+  color: var(--ok);
+}
+
+.vs__detail {
+  color: var(--text-4);
+  font-size: var(--t-micro);
+}
+
+.ins__findingnote {
+  max-width: 76ch;
+  margin-top: var(--s-4);
+  padding-top: var(--s-4);
+  border-top: 1px dashed var(--line-soft);
+  color: var(--text-3);
+  font-size: var(--t-small);
+  line-height: 1.75;
+}
